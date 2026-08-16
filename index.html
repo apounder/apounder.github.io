@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Austin Pounder — experimental and computational organic chemistry research." name="description"/><title>Austin Pounder — Research</title><style>
+:root{
+  --ink:#161A19; --muted:#747673; --line:#DEDBD5; --soft:#F3F1EC; --blue:#185B5F;
+  --blue2:#4D9396; --orange:#C86A42; --violet:#839885; --paper:#ffffff;
+  --max:1920px; --pad:clamp(24px,2.2vw,42px);
+  --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+button,input{font:inherit}
+::selection{background:#DCEBE7;color:#161A19}
+.container{width:min(100%,var(--max));margin:0 auto;padding-inline:var(--pad)}
+
+/* header */
+.site-header{height:66px;background:#fff;display:flex;align-items:center;border-bottom:1px solid #eee;position:sticky;top:0;z-index:50}
+.header-inner{width:100%;display:flex;align-items:center;justify-content:space-between;gap:50px}
+.logo{display:inline-flex;flex-direction:column;line-height:.86;min-width:255px}
+.logo-main{font-size:24px;font-weight:800;letter-spacing:.055em;text-transform:uppercase}
+.logo-sub{font-family:var(--serif);font-size:18px;font-weight:400;align-self:flex-end;margin-right:7px;color:#3A3D39;letter-spacing:.02em}
+.nav{display:flex;align-items:center;gap:clamp(18px,2.15vw,42px);margin-left:auto}
+.nav a{font-size:15px;font-weight:500;position:relative;white-space:nowrap}
+.nav a:after{content:"";position:absolute;left:0;bottom:-8px;width:100%;height:1px;background:#161A19;transform:scaleX(0);transform-origin:right;transition:transform .25s ease}
+.nav a:hover:after,.nav a.active:after{transform:scaleX(1);transform-origin:left}
+.orbit-button{width:39px;height:39px;border:1px solid #161A19;border-radius:50%;display:grid;place-items:center;margin-left:12px;position:relative;transition:transform .35s ease}
+.orbit-button:hover{transform:rotate(180deg)}
+.orbit-button:before,.orbit-button:after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;background:#161A19;top:-3px;left:18px}.orbit-button:after{top:auto;bottom:-3px}
+.orbit-button span{font-family:var(--serif);font-size:16px}
+.menu{display:none;border:0;background:transparent;font-size:26px}
+
+/* hero */
+.hero{height:calc(100vh - 66px);min-height:650px;background:#F3F1EC;position:relative;overflow:hidden;display:grid;place-items:center}
+.hero-molecule{position:absolute;left:5.5%;top:0;width:min(48vw,780px);height:76%;opacity:.88;pointer-events:none;transition:opacity .8s ease;z-index:0}
+.hero-network{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+body.hero-network-ready .hero-molecule{opacity:0}
+@media (prefers-reduced-motion:reduce){.hero-molecule{transition:none}}
+.hero-center{position:relative;z-index:2;width:min(880px,68vw);text-align:center;margin-top:-1vh}
+.hero-title{font-size:clamp(46px,3.55vw,63px);font-weight:700;letter-spacing:.035em;line-height:.94;color:var(--blue);text-transform:uppercase;margin:0}
+.hero-small{display:block;font-family:var(--serif);font-weight:400;text-transform:none;color:#8C8A86;font-size:clamp(28px,2.2vw,40px);letter-spacing:.01em;margin-top:0;margin-left:45%}
+.hero-divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:34px 0 28px}.hero-divider:before,.hero-divider:after{content:"";height:1px;width:44px;background:#999}.hero-divider span{width:2px;height:19px;background:var(--orange)}
+.hero-copy{font-family:var(--serif);font-size:clamp(19px,1.35vw,24px);line-height:1.48;color:#333632;max-width:700px;margin:0 auto}
+.hero-side-nav{position:absolute;right:33px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:34px;align-items:center;z-index:4}
+.hero-side-nav a{font-size:15px;color:#93928E;width:47px;height:47px;display:grid;place-items:center;border-radius:50%;position:relative}
+.hero-side-nav a.active{color:var(--blue2)}
+.hero-side-nav a.active:before,.hero-side-nav a.active:after{content:"";position:absolute;inset:0;border:1.5px solid var(--blue2);border-radius:50%;border-left-color:transparent;transform:rotate(25deg)}
+.hero-side-nav a.active:after{inset:5px;border-width:1px;border-right-color:transparent;transform:rotate(-40deg)}
+.scroll-cue{position:absolute;bottom:23px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;color:#6E706D;font-size:13px;font-weight:600;letter-spacing:.02em}
+.scroll-cue .arrow{width:24px;height:24px;border:1px solid #74736F;border-radius:50%;display:grid;place-items:center;margin-bottom:6px;font-size:16px}
+
+/* intro */
+.section{padding:clamp(88px,9vw,150px) 0}
+.section-kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:22px}
+.section-title{font-size:clamp(44px,5vw,76px);letter-spacing:-.035em;line-height:1.02;margin:0;font-weight:650}
+.section-title.serif{font-family:var(--serif);font-weight:400}
+.lead{font-family:var(--serif);font-size:clamp(25px,2.5vw,39px);line-height:1.45;color:#30332F;letter-spacing:-.01em}
+.two-col{display:grid;grid-template-columns:minmax(260px,.7fr) minmax(0,1.3fr);gap:clamp(50px,8vw,150px);align-items:start}
+.body-copy{font-size:18px;line-height:1.8;color:#4A4D49;max-width:810px}.body-copy p:first-child{margin-top:0}
+.meta-list{border-top:1px solid var(--line)}.meta-row{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:17px 0;border-bottom:1px solid var(--line)}.meta-label{text-transform:uppercase;font-size:10px;letter-spacing:.14em;color:#82827F;font-weight:700}.meta-value{font-size:14px;color:#2F322E}
+
+
+/* about portrait ------------------------------------------------------------ */
+.about-left{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+.about-photo{
+  width:min(100%,390px);
+  margin-top:38px;
+  aspect-ratio:4/5;
+  overflow:hidden;
+  background:#F3F1EC;
+  border:1px solid var(--line);
+  position:relative;
+}
+.about-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.about-photo-caption{
+  margin-top:10px;
+  font-size:10px;
+  line-height:1.45;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  color:#8A8B87;
+}
+@media(max-width:1050px){
+  .about-photo{
+    width:min(100%,440px);
+  }
+}
+@media(max-width:760px){
+  .about-photo{
+    width:100%;
+    max-width:520px;
+    margin-top:26px;
+  }
+}
+
+/* blocks */
+.gray{background:#F7F5F0}.blue-band{background:var(--blue);color:white}
+.metric-row{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #DCD8D1;border-bottom:1px solid #DCD8D1}
+.metric{padding:36px 30px;border-right:1px solid #DCD8D1}.metric:first-child{padding-left:0}.metric:last-child{border-right:0}.metric strong{font-family:var(--serif);font-weight:400;font-size:56px;line-height:1;color:var(--blue)}.metric span{display:block;color:#747673;font-size:12px;text-transform:uppercase;letter-spacing:.09em;margin-top:8px}
+
+/* research preview */
+.research-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#DDDAD4;border:1px solid #DDDAD4;margin-top:60px}
+.research-card{background:#fff;min-height:430px;padding:42px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.research-card .number{font-family:var(--serif);font-size:15px;color:#8B8985}.research-card h3{font-family:var(--serif);font-size:40px;font-weight:400;line-height:1.08;margin:40px 0 18px;max-width:460px}.research-card p{max-width:580px;color:#60635F;line-height:1.7;margin:0}.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:36px}.tag{font-size:10px;letter-spacing:.09em;text-transform:uppercase;border:1px solid #DAD7D1;padding:7px 10px;border-radius:99px;background:#FBFAF7}
+.mini-molecule{position:absolute;right:-45px;top:-50px;width:270px;height:270px;opacity:.75;transition:transform .5s ease}.research-card:hover .mini-molecule{transform:rotate(7deg) scale(1.04)}
+
+/* editorial rows */
+.editorial-list{border-top:1px solid var(--line);margin-top:46px}.editorial-row{display:grid;grid-template-columns:120px minmax(0,1fr) 160px;gap:35px;padding:28px 0;border-bottom:1px solid var(--line);align-items:start;transition:background .2s ease,padding .2s ease}.editorial-row:hover{background:#FBFAF7;padding-left:14px;padding-right:14px}.editorial-year{font-family:var(--serif);font-size:24px;color:#74736F}.editorial-title{font-family:var(--serif);font-size:25px;line-height:1.25;margin:0 0 9px}.editorial-meta{font-size:13px;color:#747673}.editorial-link{text-align:right;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);font-weight:700}
+
+/* page hero */
+.page-hero{background:#F3F1EC;min-height:460px;display:flex;align-items:center;position:relative;overflow:hidden;border-bottom:1px solid #E3E0DA}.page-hero .container{position:relative;z-index:2}.page-title{color:var(--blue);font-size:clamp(64px,8vw,130px);line-height:.9;letter-spacing:-.03em;margin:0;text-transform:uppercase;font-weight:700}.page-subtitle{font-family:var(--serif);font-size:clamp(21px,2vw,31px);line-height:1.5;max-width:760px;color:#44474c;margin:30px 0 0}.page-orbit{position:absolute;right:5%;top:50%;transform:translateY(-50%);width:310px;height:310px;opacity:.85}
+
+/* research detail */
+.program{border-top:1px solid var(--line);padding:70px 0}.program-grid{display:grid;grid-template-columns:110px minmax(0,1.2fr) minmax(300px,.8fr);gap:50px}.program-no{font-family:var(--serif);font-size:52px;color:#9B9994}.program h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,4vw,64px);line-height:1.03;margin:0 0 24px}.program p{font-size:17px;line-height:1.75;color:#545753;max-width:760px}.program-side{padding-top:8px}.program-side h4{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#898985;margin:0 0 15px}.method-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}.method-list li{padding:11px 0;border-bottom:1px solid var(--line);font-size:13px}.program-visual{margin-top:28px;height:190px;background:#F7F5F0;position:relative;overflow:hidden}
+
+/* publications */
+.pub-toolbar{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:26px 0;border-bottom:1px solid var(--line);position:sticky;top:66px;background:#fff;z-index:30}.filters{display:flex;gap:10px;flex-wrap:wrap}.filter{border:1px solid #D2D0CA;background:#fff;border-radius:99px;padding:8px 13px;font-size:11px;text-transform:uppercase;letter-spacing:.08em;cursor:pointer}.filter.active,.filter:hover{background:var(--blue);border-color:var(--blue);color:white}.search{width:min(350px,38vw);border:0;border-bottom:1px solid #C3C0BA;padding:8px 0;background:transparent;outline:none}
+.pub-year-block{display:grid;grid-template-columns:120px 1fr;border-bottom:1px solid var(--line)}.pub-year{font-family:var(--serif);font-size:40px;padding:34px 0;color:#6C6E6B;position:sticky;top:155px;height:min-content}.pub-items{border-left:1px solid var(--line)}.pub-item{padding:31px 0 31px 38px;border-bottom:1px solid #ECEAE5;display:grid;grid-template-columns:minmax(0,1fr) 90px;gap:25px}.pub-item:last-child{border-bottom:0}.pub-journal{font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:#80807D;font-weight:700}.pub-title{font-family:var(--serif);font-size:25px;line-height:1.24;margin:8px 0 10px;max-width:1000px}.pub-authors{font-size:13px;line-height:1.55;color:#646764}.pub-authors strong{color:#161A19}.pub-details{font-size:12px;color:#858581;margin-top:9px}.pub-num{font-family:var(--serif);font-size:36px;color:#B4B1AB;text-align:right}.pub-link{display:inline-block;margin-top:11px;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);font-weight:700}.hidden{display:none!important}
+
+/* posters */
+.poster-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:55px}.poster{border:1px solid #DDDAD4;background:#fff;transition:transform .25s ease,box-shadow .25s ease}.poster:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.07)}.poster-art{aspect-ratio:4/3;background:#F3F1EC;position:relative;overflow:hidden;padding:30px;display:flex;flex-direction:column;justify-content:space-between}.poster-art .year{font-family:var(--serif);font-size:52px;color:var(--blue)}.poster-art .line{height:1px;background:#BDBAB5;width:45%;position:relative}.poster-art .line:after{content:"";position:absolute;width:3px;height:18px;background:var(--orange);right:0;top:-8px}.poster-art svg{position:absolute;right:-25px;bottom:-30px;width:240px;height:240px;opacity:.9}.poster-body{padding:25px 27px 29px}.poster-body h3{font-family:var(--serif);font-size:24px;font-weight:400;line-height:1.2;margin:0 0 20px}.poster-event{font-size:13px;color:#6B6D6A;line-height:1.5}.poster-loc{font-size:10px;text-transform:uppercase;letter-spacing:.1em;margin-top:12px}.winner{display:inline-block;background:#D99A72;color:#161A19;padding:5px 8px;font-size:9px;text-transform:uppercase;letter-spacing:.09em;font-weight:700;margin-bottom:10px}
+
+/* footer */
+.footer{background:#161A19;color:white;padding:65px 0 36px;margin-top:90px}.footer-grid{display:grid;grid-template-columns:1fr auto;gap:60px}.footer-logo .logo-main{font-size:32px}.footer-logo .logo-sub{color:#BCB9B3}.footer-links{display:grid;grid-template-columns:repeat(2,auto);gap:10px 46px;align-content:start}.footer-links a{font-size:13px;color:#CAC7C1}.footer-links a:hover{color:#fff}.footer-bottom{border-top:1px solid #35363a;margin-top:50px;padding-top:21px;display:flex;justify-content:space-between;color:#747673;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,1,.36,1)}.reveal.in{opacity:1;transform:none}
+
+@media(max-width:1050px){
+  .nav{gap:22px}.nav a{font-size:13px}.orbit-button{display:none}.logo{min-width:auto}
+  .hero-molecule{width:65vw;left:-8%}.hero-center{width:min(780px,78vw)}.hero-side-nav{right:12px}
+  .two-col{grid-template-columns:1fr;gap:50px}.research-grid{grid-template-columns:1fr}.program-grid{grid-template-columns:85px 1fr}.program-side{grid-column:2}.poster-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+  .site-header{height:66px}.header-inner{gap:12px}.logo-main{font-size:18px}.logo-sub{font-size:14px}.nav{display:none;position:absolute;top:66px;left:0;right:0;background:white;border-bottom:1px solid #ddd;flex-direction:column;align-items:flex-start;padding:22px var(--pad)}.nav.open{display:flex}.menu{display:block}.hero{height:auto;min-height:calc(100svh - 66px);padding:90px 0 90px}.hero-molecule{width:95vw;height:56%;left:-25%;top:0}.hero-center{width:86vw}.hero-title{font-size:clamp(40px,12vw,66px)}.hero-small{margin-left:30%;font-size:30px}.hero-copy{font-size:19px}.hero-side-nav{display:none}.scroll-cue{bottom:14px}
+  .metric-row{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0}.metric:nth-child(n+3){border-top:1px solid #DCD8D1}.research-card{min-height:360px;padding:28px}.research-card h3{font-size:34px}
+  .editorial-row{grid-template-columns:70px 1fr}.editorial-link{grid-column:2;text-align:left}.page-hero{min-height:350px}.page-orbit{right:-120px;opacity:.45}.page-title{font-size:58px}.program-grid{grid-template-columns:1fr;gap:10px}.program-side{grid-column:auto}.program-no{font-size:34px}.pub-toolbar{top:68px;align-items:stretch;flex-direction:column}.search{width:100%}.pub-year-block{grid-template-columns:1fr}.pub-year{position:static;padding-bottom:10px}.pub-items{border-left:0}.pub-item{padding-left:0;grid-template-columns:1fr}.pub-num{text-align:left;order:-1}.poster-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.footer-links{grid-template-columns:1fr 1fr}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:8px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation:none!important;transition:none!important}}
+
+.research-icon{position:absolute;right:28px;top:26px;width:142px;height:112px;opacity:.82}.research-card.featured{grid-column:1/-1;min-height:365px;background:linear-gradient(120deg,#fff 0%,#fff 62%,#F2F4F0 100%)}.research-card.featured h3{max-width:720px}.research-card.featured p{max-width:760px}.program-icon{position:absolute;inset:18px;width:calc(100% - 36px);height:calc(100% - 36px)}
+/* honeycomb research imagery ------------------------------------------------ */
+.hex-feature{padding:72px 0 84px;background:#FBFAF7;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hex-feature-grid{display:grid;grid-template-columns:minmax(260px,.72fr) minmax(560px,1.28fr);gap:clamp(46px,7vw,120px);align-items:center}
+.hex-feature .section-title{font-size:clamp(38px,4.1vw,64px)}
+.hex-note{font-family:var(--serif);font-size:20px;line-height:1.55;color:#515651;max-width:520px;margin:22px 0 0}
+.hex-wall{display:grid;grid-template-columns:repeat(4,minmax(122px,1fr));gap:14px 10px;align-items:start;max-width:850px;margin-left:auto}
+.hex-cell{position:relative;min-width:0;transition:transform .28s ease;outline:none}
+.hex-cell:nth-child(n+5){transform:translateX(52%)}
+.hex-cell:hover{transform:translateY(-6px)}
+.hex-cell:nth-child(n+5):hover{transform:translate(52%,-6px)}
+.hex-shape{aspect-ratio:1/1.08;background:var(--hex-bg,#F1F0EB);clip-path:polygon(25% 6.7%,75% 6.7%,100% 50%,75% 93.3%,25% 93.3%,0 50%);display:grid;place-items:center;padding:21%;position:relative;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(22,26,25,.05)}
+.hex-shape:after{content:"";position:absolute;inset:0;background:linear-gradient(145deg,rgba(255,255,255,.45),transparent 42%,rgba(24,91,95,.04));pointer-events:none}
+.hex-shape svg{width:100%;height:100%;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.hex-cell:hover .hex-shape svg{transform:scale(1.08) rotate(2deg)}
+.hex-caption{padding:8px 8px 0;text-align:center;line-height:1.2}.hex-caption strong{display:block;font-family:var(--serif);font-size:15px;font-weight:400}.hex-caption span{display:block;margin-top:4px;font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:#8A8B87}
+.hex-wall.compact{max-width:980px;margin:0 auto;grid-template-columns:repeat(6,1fr);gap:8px}.hex-wall.compact .hex-cell:nth-child(n+5){transform:none}.hex-wall.compact .hex-cell:hover{transform:translateY(-5px)}
+@media(max-width:1050px){.hex-feature-grid{grid-template-columns:1fr}.hex-wall{margin:0 auto;width:min(100%,760px)}}
+@media(max-width:760px){.hex-wall,.hex-wall.compact{grid-template-columns:repeat(3,1fr);gap:8px}.hex-cell:nth-child(n+5){transform:none}.hex-cell:nth-child(n+4){transform:translateX(0)}.hex-caption span{display:none}.hex-feature{padding:55px 0}}
+
+/* paired interactive structure viewers -------------------------------------- */
+.molecule-lab{background:#17201E;padding:clamp(72px,7vw,112px) 0;overflow:hidden;position:relative}
+.molecule-lab:before{content:"";position:absolute;inset:-35% auto auto 54%;width:640px;height:640px;border:1px solid rgba(255,255,255,.04);border-radius:50%;box-shadow:0 0 0 105px rgba(255,255,255,.014),0 0 0 210px rgba(255,255,255,.009)}
+.structure-pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.5vw,34px);position:relative;z-index:2}
+.structure-stage{height:clamp(430px,42vw,610px);background:#F1EFE9;position:relative;overflow:hidden;box-shadow:0 24px 68px rgba(0,0,0,.20)}
+.structure-viewer{position:absolute;inset:0}.structure-stage canvas{outline:none!important}
+.structure-name{position:absolute;z-index:5;left:22px;bottom:20px;font-family:var(--serif);font-size:clamp(22px,2vw,33px);line-height:1.05;color:#252B29;background:rgba(241,239,233,.78);backdrop-filter:blur(8px);padding:8px 11px;pointer-events:none}
+.structure-fallback{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;transition:opacity .35s ease}.structure-fallback svg{width:60%;height:60%;opacity:.55}.structure-stage.viewer-ready .structure-fallback{opacity:0}
+@media(max-width:900px){.structure-pair{grid-template-columns:1fr}.structure-stage{height:520px}}
+@media(max-width:620px){.structure-stage{height:390px}.structure-name{left:14px;bottom:13px;font-size:22px}}
+
+
+</style></head><body><header class="site-header"><div class="container header-inner"><a class="logo" href="index.html"><span class="logo-main">Austin Pounder</span><span class="logo-sub">research</span></a><nav class="nav"><a class="active" href="index.html">About</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="posters.html">Posters</a><a href="resources.html">Resources</a><a href="assets/files/Austin_Pounder_CV.pdf" target="_blank">CV</a></nav><a aria-label="Email Austin" class="orbit-button" href="mailto:austin.pounder@colostate.edu"><span>±</span></a><button aria-label="Open navigation" class="menu" type="button">☰</button></div></header><main>
+<section class="hero" id="top"><div class="hero-molecule"><svg aria-hidden="true" viewbox="0 0 760 650">
+<g fill="none" stroke="#d1d3d5" stroke-width="2.2">
+<path d="M80 90 L145 72 L206 105 L274 90 L322 128 L383 116"></path>
+<path d="M145 72 L165 142 L218 170 L285 151"></path>
+<path d="M218 170 L195 240 L245 282 L322 275 L354 218"></path>
+<path d="M245 282 L305 334 L378 320 L430 362 L492 346"></path>
+<path d="M378 320 L368 402 L420 445 L483 423 L535 462"></path>
+<path d="M420 445 L447 520 L520 536 L576 508"></path>
+<path d="M305 334 L274 402 L316 452"></path>
+<path d="M535 462 L603 442 L649 474"></path>
+</g>
+<g fill="#dedfe1">
+<circle cx="80" cy="90" r="12"></circle><circle cx="145" cy="72" r="14"></circle><circle cx="206" cy="105" r="12"></circle><circle cx="274" cy="90" r="14"></circle><circle cx="322" cy="128" r="12"></circle><circle cx="383" cy="116" r="16"></circle>
+<circle cx="165" cy="142" r="10"></circle><circle cx="218" cy="170" r="11"></circle><circle cx="285" cy="151" r="11"></circle><circle cx="195" cy="240" r="9"></circle><circle cx="245" cy="282" r="16"></circle><circle cx="322" cy="275" r="10"></circle><circle cx="354" cy="218" r="11"></circle>
+<circle cx="305" cy="334" r="11"></circle><circle cx="378" cy="320" r="18"></circle><circle cx="430" cy="362" r="10"></circle><circle cx="492" cy="346" r="12"></circle><circle cx="368" cy="402" r="10"></circle><circle cx="420" cy="445" r="11"></circle><circle cx="483" cy="423" r="10"></circle><circle cx="535" cy="462" r="12"></circle><circle cx="447" cy="520" r="9"></circle><circle cx="520" cy="536" r="12"></circle><circle cx="576" cy="508" r="9"></circle><circle cx="274" cy="402" r="8"></circle><circle cx="316" cy="452" r="10"></circle><circle cx="603" cy="442" r="9"></circle><circle cx="649" cy="474" r="10"></circle>
+</g>
+<circle cx="105" cy="132" fill="#839885" r="15"></circle><circle cx="274" cy="90" fill="#202124" r="16"></circle><circle cx="245" cy="282" fill="#C86A42" r="17"></circle><circle cx="378" cy="320" fill="#b9babd" r="17"></circle><circle cx="420" cy="445" fill="#3298cb" r="11"></circle><circle cx="305" cy="334" fill="#839885" r="7"></circle>
+</svg></div><canvas aria-hidden="true" class="hero-network" id="heroNetwork"></canvas><div class="hero-center"><h1 class="hero-title">Austin Pounder<span class="hero-small">research</span></h1><div class="hero-divider"><span></span></div><p class="hero-copy">Experimental and computational chemistry for understanding reaction mechanisms, molecular dynamics, and predictive models of chemical reactivity.</p></div><div class="hero-side-nav"><a class="active" href="#top">01</a><a href="#about">02</a><a href="#research">03</a><a href="#work">04</a></div><a class="scroll-cue" href="#about"><span class="arrow">↓</span><span>SCROLL</span></a></section>
+<section class="section" id="about">
+<div class="container two-col">
+<div class="reveal about-left">
+<div class="section-kicker">About</div>
+<h2 class="section-title serif">
+        Chemistry across experiment, computation, and scale.
+      </h2>
+<figure class="about-photo">
+<img alt="Austin Pounder" loading="lazy" src="assets/images/about/austin-pounder.jpg"/>
+</figure>
+<div class="about-photo-caption">
+        Austin Pounder
+      </div>
+</div>
+<div class="reveal">
+<p class="lead">
+        I work at the interface of experimental and computational organic chemistry
+      </p>
+<div class="body-copy">
+<p>
+          My research combines quantum chemistry, molecular dynamics, and emerging
+          machine-learned models to study chemical reactivity across scales—from
+          small molecule reactivity to conformational ensembles in nucleic acids.
+        </p>
+<p>
+          The central objective is practical: develop chemically interpretable
+          computational approaches that extend the scale, speed, and scope of
+          mechanistic questions that can be addressed, accelerating organic chemistry.
+        </p>
+</div>
+<div class="meta-list" style="margin-top:38px">
+<div class="meta-row">
+<div class="meta-label">Current</div>
+<div class="meta-value">
+            NSERC Canada Postdoctoral Research Award · Colorado State University · Paton Group
+          </div>
+</div>
+<div class="meta-row">
+<div class="meta-label">Training</div>
+<div class="meta-value">
+            PhD, Experimental &amp; Computational Organic Chemistry · University of Guelph
+          </div>
+</div>
+<div class="meta-row">
+<div class="meta-label">Profiles</div>
+<div class="meta-value">
+<a href="https://scholar.google.ca/citations?user=NLcTITgAAAAJ&amp;hl=en" target="_blank">
+              Google Scholar
+            </a>
+             · 
+            <a href="https://orcid.org/0000-0002-5843-0922" target="_blank">
+              ORCID
+            </a>
+             · 
+            <a href="https://www.linkedin.com/in/austin-pounder-629a101b5/" target="_blank">
+              LinkedIn
+            </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="research"><div class="container"><div class="two-col"><div class="reveal"><div class="section-kicker">Research</div><h2 class="section-title">Four connected research directions.</h2></div><div class="body-copy reveal"><p>Across projects, the common theme is mechanistic understanding: connecting organic reactivity, molecular structure, dynamics, and predictive models.</p><p><a href="research.html" style="color:var(--blue);font-weight:700">Explore research →</a></p></div></div><div class="research-grid">
+<div class="research-card reveal"><svg aria-hidden="true" class="research-icon" focusable="false" viewbox="0 0 220 170">
+<g fill="none" stroke="#66706B" stroke-linecap="round" stroke-linejoin="round">
+<path d="M90 28h40" stroke-width="3"></path>
+<path d="M102 28v34l-34 56c-6 10 1 20 14 20h56c13 0 20-10 14-20l-34-56V28" stroke-width="3.2"></path>
+<path d="M78 96h64" opacity=".7" stroke-width="2.4"></path>
+</g>
+<circle cx="94" cy="106" fill="#185B5F" r="5.5"></circle>
+<circle cx="110" cy="98" fill="#C86A42" r="4.8"></circle>
+<circle cx="122" cy="108" fill="#839885" r="4.8"></circle>
+</svg><div class="number">01</div><h3>Organic synthesis &amp; catalysis</h3><p>Experimental and computational studies of synthetic organic reactions, with particular emphasis on transition-metal catalysis, methodology development, reaction optimization, and the mechanistic factors that control productive reactivity.</p><div class="tag-row"><span class="tag">Organic synthesis</span><span class="tag">Transition-metal catalysis</span><span class="tag">Methodology</span></div></div>
+<div class="research-card reveal"><svg aria-hidden="true" class="research-icon" focusable="false" viewbox="0 0 220 170">
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M28 118
+             C52 118, 56 96, 74 96
+             C92 96, 94 38, 110 38
+             C126 38, 130 106, 150 106
+             C168 106, 178 94, 192 94" stroke="#185B5F" stroke-width="3.6"></path>
+<path d="M24 130H196" stroke="#CEC9C0" stroke-width="2"></path>
+</g>
+<circle cx="74" cy="96" fill="#839885" r="4.8"></circle>
+<circle cx="110" cy="38" fill="#C86A42" r="5.4"></circle>
+<circle cx="150" cy="106" fill="#4D9396" r="4.8"></circle>
+</svg><div class="number">02</div><h3>Reaction mechanisms, selectivity &amp; ML potentials</h3><p>Electronic-structure calculations and machine-learned interatomic potentials to map reaction pathways, locate transition states, rationalize selectivity, and accelerate mechanistic workflows.</p><div class="tag-row"><span class="tag">DFT</span><span class="tag">Transition states</span><span class="tag">MLIP</span></div></div>
+<div class="research-card reveal"><svg aria-hidden="true" class="research-icon" focusable="false" viewbox="0 0 220 170">
+<rect fill="none" height="112" rx="8" ry="8" stroke="#D9D4CC" stroke-width="2" width="172" x="24" y="28"></rect>
+<path d="M32 106
+           C42 102, 50 86, 60 82
+           C70 78, 80 96, 92 90
+           C102 84, 110 62, 122 58
+           C134 54, 144 72, 156 70
+           C168 68, 178 80, 188 78" fill="none" stroke="#185B5F" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.8"></path>
+</svg><div class="number">03</div><h3>Molecular dynamics &amp; nucleic acids</h3><p>Simulation and ensemble analysis of RNA and DNA structure, conformational heterogeneity, ionic effects, and sampling convergence.</p><div class="tag-row"><span class="tag">MD</span><span class="tag">RNA</span><span class="tag">Sampling</span></div></div>
+<div class="research-card reveal"><svg aria-hidden="true" class="research-icon" focusable="false" viewbox="0 0 220 170">
+<path d="M36 114
+           C56 74, 86 78, 102 102
+           C118 126, 146 126, 168 84" fill="none" stroke="#C86A42" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+<path d="M160 86l14-4-6 13" fill="none" stroke="#C86A42" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+</svg><div class="number">04</div><h3>Photochemistry &amp; molecular probes</h3><p>Combining electronic-structure calculations, simulation, synthesis, and experiment to understand fluorescent probes, photobasicity, and biomolecular sensing.</p><div class="tag-row"><span class="tag">TD-DFT</span><span class="tag">Fluorescence</span><span class="tag">Molecular probes</span></div></div>
+</div></div></section><section class="molecule-lab" id="molecular-space"><div class="container structure-pair">
+<div class="structure-stage reveal" id="smallMoleculeStage"><div aria-label="Interactive three-dimensional small-molecule viewer" class="structure-viewer" id="smallMoleculeViewer"></div><div aria-hidden="true" class="structure-fallback"><svg aria-hidden="true" focusable="false" viewbox="0 0 220 170"><g fill="none" stroke="#6F7773" stroke-linecap="round" stroke-width="2.7"><path d="M110 85L70 52M110 85l42-31M110 85l40 34M110 85l-43 31"></path><path d="M60 38l10 14-17 2M164 39l-12 15 18 1M164 132l-14-13 18-3M53 121l14-5-4 17" opacity=".6"></path><path d="M57 39c30-28 76-28 106 0M174 55c18 30 14 62-10 84M57 132c-24-21-29-54-13-83" opacity=".38"></path></g><circle cx="110" cy="85" fill="#185B5F" r="24"></circle><text fill="#fff" font-family="Arial,sans-serif" font-size="20" font-weight="700" text-anchor="middle" x="110" y="92">M</text><circle cx="70" cy="52" fill="#C86A42" r="8"></circle><circle cx="152" cy="54" fill="#839885" r="8"></circle><circle cx="150" cy="119" fill="#C86A42" r="8"></circle><circle cx="67" cy="116" fill="#4D9396" r="8"></circle></svg></div><div class="structure-name" id="smallMoleculeName"></div></div>
+<div class="structure-stage reveal" id="pdbStage"><div aria-label="Interactive three-dimensional PDB structure viewer" class="structure-viewer" id="pdbViewer"></div><div aria-hidden="true" class="structure-fallback"><svg aria-hidden="true" focusable="false" viewbox="0 0 220 170"><g fill="none" stroke="#6F7773" stroke-linecap="round" stroke-width="2.8"><path d="M62 18c72 32 72 101 0 134"></path><path d="M158 18c-72 32-72 101 0 134"></path><path d="M83 35h54M69 58h82M63 83h94M70 108h80M84 133h52" opacity=".58"></path></g><circle cx="62" cy="18" fill="#185B5F" r="7"></circle><circle cx="158" cy="152" fill="#C86A42" r="7"></circle><circle cx="69" cy="58" fill="#839885" r="5"></circle><circle cx="150" cy="108" fill="#4D9396" r="5"></circle></svg></div><div class="structure-name" id="pdbName"></div></div>
+</div></section><section class="section gray" id="work"><div class="container"><div class="two-col"><div class="reveal"><div class="section-kicker">Selected work</div><h2 class="section-title serif">Recent publications.</h2></div><div class="body-copy reveal"><p><a href="publications.html" style="color:var(--blue);font-weight:700">View all publications →</a></p></div></div><div class="editorial-list"><a class="editorial-row reveal" href="https://doi.org/10.26434/chemrxiv.15004886/v3" target="_blank"><div class="editorial-year">2026</div><div><h3 class="editorial-title">Isomeric Indole-Chalcone Surrogates as Complementary Reporters of Nucleic Acid Binding Thermodynamics</h3><div class="editorial-meta">J. Phys. Chem. B · 2026 , Accepted</div></div><div class="editorial-link">View article ↗</div></a><a class="editorial-row reveal" href="https://doi.org/10.1021/acs.joc.5c03050" target="_blank"><div class="editorial-year">2026</div><div><h3 class="editorial-title">An Experimental and Computational Investigation into the Allylboration/Defluorinative Semipinacol Rearrangement Cascade Reaction</h3><div class="editorial-meta">J. Org. Chem. · 2026 , 91, 7730–7737</div></div><div class="editorial-link">View article ↗</div></a><a class="editorial-row reveal" href="https://www.sciencedirect.com/science/article/pii/S0022286026010550" target="_blank"><div class="editorial-year">2026</div><div><h3 class="editorial-title">Structural Characterization of Difluoroglycine Betaines</h3><div class="editorial-meta">J. Mol. Struct. · 2026 , 1368, 146292</div></div><div class="editorial-link">View article ↗</div></a><a class="editorial-row reveal" href="https://doi.org/10.1002/ejoc.202501058" target="_blank"><div class="editorial-year">2025</div><div><h3 class="editorial-title">Chemoselective Divergence via Substrate Control: Decarboxylative and Decarbonylative Coupling of 2-Oxoacids with Allylic Difluorides</h3><div class="editorial-meta">Eur. J. Org. Chem. · 2025 , e202501058</div></div><div class="editorial-link">View article ↗</div></a></div></div></section>
+</main><footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-logo logo"><span class="logo-main">Austin Pounder</span><span class="logo-sub">research</span></div><div class="footer-links"><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="posters.html">Posters</a><a href="resources.html">Resources</a><a href="assets/files/Austin_Pounder_CV.pdf" rel="noopener" target="_blank">Curriculum Vitae</a><a href="https://scholar.google.ca/citations?user=NLcTITgAAAAJ&amp;hl=en" rel="noopener" target="_blank">Google Scholar</a><a href="https://orcid.org/0000-0002-5843-0922" rel="noopener" target="_blank">ORCID</a><a href="https://www.linkedin.com/in/austin-pounder-629a101b5/" rel="noopener" target="_blank">LinkedIn</a><a href="https://github.com/apounder" rel="noopener" target="_blank">GitHub</a></div></div><div class="footer-bottom"><span>Experimental + Computational Organic Chemistry</span><span>Colorado State University · Fort Collins, Colorado</span></div></div></footer><script src="https://cdn.jsdelivr.net/npm/3dmol@2.5.5/build/3Dmol-min.js"></script><script>
+const menuBtn=document.querySelector('.menu'); const nav=document.querySelector('.nav');
+if(menuBtn&&nav){menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));}
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+
+/* Interactive molecular field -------------------------------------------------
+   A lightweight canvas network with spring-bound nodes. It drifts slowly at
+   rest and responds to the pointer with gentle parallax + local repulsion.
+   The static SVG remains as the no-JS / reduced-motion fallback.
+---------------------------------------------------------------------------- */
+(()=>{
+  const hero=document.querySelector('.hero');
+  const canvas=document.getElementById('heroNetwork');
+  if(!hero||!canvas) return;
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce) return;
+
+  const ctx=canvas.getContext('2d',{alpha:true});
+  const palette={
+    neutral:'#C9CBC7',
+    dark:'#313633',
+    teal:'#185B5F',
+    sea:'#4D9396',
+    copper:'#C86A42',
+    sage:'#839885'
+  };
+
+  // Normalized coordinates keep the same composition at any viewport size.
+  // The graph is intentionally denser to the left/top so the title stays clear.
+  const seed=[
+    [.055,.13,6,'sage',.30], [.105,.105,8,'neutral',.45], [.158,.145,7,'neutral',.55],
+    [.216,.11,10,'dark',.70], [.274,.16,7,'neutral',.35], [.326,.135,8,'neutral',.50],
+    [.118,.215,6,'neutral',.35], [.168,.245,7,'neutral',.55], [.226,.225,6,'neutral',.40],
+    [.145,.325,6,'neutral',.30], [.205,.365,10,'copper',.80], [.267,.35,7,'neutral',.45],
+    [.308,.287,6,'neutral',.38], [.255,.445,7,'neutral',.40], [.325,.43,11,'neutral',.55],
+    [.375,.49,6,'sage',.65], [.426,.465,7,'neutral',.35], [.318,.555,6,'neutral',.30],
+    [.365,.615,7,'sea',.80], [.426,.585,6,'neutral',.40], [.476,.64,7,'neutral',.48],
+    [.516,.605,6,'neutral',.32], [.228,.545,5,'neutral',.30], [.270,.61,6,'neutral',.42],
+    [.560,.54,5,'neutral',.25], [.606,.575,6,'neutral',.35],
+    // A few faint peripheral nodes make the interaction feel spatial without clutter.
+    [.72,.18,4,'neutral',.18], [.80,.26,5,'neutral',.20], [.88,.16,4,'sage',.24],
+    [.75,.75,5,'neutral',.18], [.86,.69,4,'neutral',.17], [.92,.80,5,'neutral',.20]
+  ];
+  const edges=[
+    [0,1],[1,2],[2,3],[3,4],[4,5],[1,6],[6,7],[7,8],[7,9],[9,10],[10,11],[11,12],
+    [10,13],[13,14],[14,15],[15,16],[14,17],[17,18],[18,19],[19,20],[20,21],[13,22],[22,23],
+    [16,24],[24,25],[27,28],[28,26],[29,30],[30,31]
+  ];
+
+  const nodes=seed.map((n,i)=>({
+    nx:n[0], ny:n[1], r:n[2], color:n[3], depth:n[4],
+    x:0,y:0,vx:0,vy:0,
+    phase:i*1.731, speed:.18+(i%5)*.035,
+    ampX:4+(i%4)*1.7, ampY:5+((i+2)%5)*1.5
+  }));
+
+  let w=0,h=0,dpr=1,raf=0,last=performance.now();
+  const mouse={x:0,y:0,inside:false,targetX:0,targetY:0};
+
+  function resize(){
+    const rect=hero.getBoundingClientRect();
+    w=Math.max(1,rect.width); h=Math.max(1,rect.height);
+    dpr=Math.min(window.devicePixelRatio||1,2);
+    canvas.width=Math.round(w*dpr); canvas.height=Math.round(h*dpr);
+    canvas.style.width=w+'px'; canvas.style.height=h+'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    nodes.forEach((n,i)=>{
+      const tx=n.nx*w, ty=n.ny*h;
+      if(!Number.isFinite(n.x)||n.x===0&&n.y===0){n.x=tx;n.y=ty;}
+      else if(i===0 && Math.abs(n.x-tx)>w*.6){n.x=tx;n.y=ty;}
+    });
+  }
+
+  function pointerPos(e){
+    const r=hero.getBoundingClientRect();
+    mouse.x=e.clientX-r.left; mouse.y=e.clientY-r.top; mouse.inside=true;
+  }
+  hero.addEventListener('pointermove',pointerPos,{passive:true});
+  hero.addEventListener('pointerenter',pointerPos,{passive:true});
+  hero.addEventListener('pointerleave',()=>{mouse.inside=false;},{passive:true});
+  window.addEventListener('resize',resize,{passive:true});
+
+  function hexToRgba(hex,a){
+    const v=parseInt(hex.slice(1),16); return `rgba(${v>>16},${(v>>8)&255},${v&255},${a})`;
+  }
+
+  function frame(now){
+    const dt=Math.min(32,now-last)/16.667; last=now;
+    const t=now*.001;
+
+    // Ease global pointer parallax so there is no snapping.
+    const desiredPX=mouse.inside ? (mouse.x-w*.5) : 0;
+    const desiredPY=mouse.inside ? (mouse.y-h*.5) : 0;
+    mouse.targetX+=(desiredPX-mouse.targetX)*.045;
+    mouse.targetY+=(desiredPY-mouse.targetY)*.045;
+
+    for(const n of nodes){
+      const driftX=Math.sin(t*n.speed+n.phase)*n.ampX;
+      const driftY=Math.cos(t*(n.speed*.82)+n.phase*.73)*n.ampY;
+      const parallaxX=mouse.targetX*.018*n.depth;
+      const parallaxY=mouse.targetY*.014*n.depth;
+      const tx=n.nx*w+driftX+parallaxX;
+      const ty=n.ny*h+driftY+parallaxY;
+
+      // Spring back toward the molecular scaffold.
+      n.vx+=(tx-n.x)*.010*dt;
+      n.vy+=(ty-n.y)*.010*dt;
+
+      // Nearby nodes gently move away from the pointer, as if suspended in fluid.
+      if(mouse.inside){
+        const dx=n.x-mouse.x, dy=n.y-mouse.y;
+        const dist=Math.hypot(dx,dy)||1;
+        const radius=Math.min(220,Math.max(150,w*.12));
+        if(dist<radius){
+          const s=(1-dist/radius);
+          const f=s*s*.34*dt;
+          n.vx+=(dx/dist)*f*10;
+          n.vy+=(dy/dist)*f*10;
+        }
+      }
+
+      n.vx*=Math.pow(.925,dt);
+      n.vy*=Math.pow(.925,dt);
+      n.x+=n.vx*dt; n.y+=n.vy*dt;
+    }
+
+    ctx.clearRect(0,0,w,h);
+
+    // Bonds first, so atoms remain crisp above them.
+    ctx.lineCap='round';
+    for(const [a,b] of edges){
+      const A=nodes[a],B=nodes[b];
+      const mx=(A.x+B.x)/2, my=(A.y+B.y)/2;
+      let alpha=.58;
+      if(mouse.inside){
+        const d=Math.hypot(mx-mouse.x,my-mouse.y);
+        alpha+=Math.max(0,1-d/260)*.18;
+      }
+      ctx.strokeStyle=`rgba(176,179,175,${Math.min(.76,alpha)})`;
+      ctx.lineWidth=1.25;
+      ctx.beginPath();ctx.moveTo(A.x,A.y);ctx.lineTo(B.x,B.y);ctx.stroke();
+    }
+
+    for(const n of nodes){
+      const colored=n.color!=='neutral';
+      let glow=0;
+      if(mouse.inside){
+        const d=Math.hypot(n.x-mouse.x,n.y-mouse.y);
+        glow=Math.max(0,1-d/180);
+      }
+      if(glow>.02){
+        ctx.beginPath();
+        ctx.fillStyle=hexToRgba(palette[n.color],.05+.08*glow);
+        ctx.arc(n.x,n.y,n.r+10+10*glow,0,Math.PI*2);ctx.fill();
+      }
+      ctx.beginPath();
+      ctx.fillStyle=colored ? palette[n.color] : hexToRgba(palette.neutral,.68);
+      ctx.arc(n.x,n.y,n.r*(1+.06*glow),0,Math.PI*2);ctx.fill();
+    }
+
+    raf=requestAnimationFrame(frame);
+  }
+
+  resize();
+  document.body.classList.add('hero-network-ready');
+  raf=requestAnimationFrame(frame);
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden){cancelAnimationFrame(raf);}
+    else{last=performance.now();raf=requestAnimationFrame(frame);}
+  });
+})();
+
+
+/* Molecular + biomolecular structure viewers ---------------------------------
+   The left viewer selects one of four chemistry categories with equal
+   probability on each page refresh:
+
+       1. metal precatalysts / catalyst complexes
+       2. catalysis ligands
+       3. drugs
+       4. natural products
+
+   Within the selected category, one structure is chosen at random.
+
+   PubChem entries are retried automatically if a particular name cannot
+   be resolved. PDB entries are also retried automatically if a structure
+   cannot be downloaded.
+----------------------------------------------------------------------------- */
+
+(() => {
+
+  /* -------------------------------------------------------------------------
+     DOM
+     ------------------------------------------------------------------------- */
+
+  const smallStage  = document.getElementById("smallMoleculeStage");
+  const smallHolder = document.getElementById("smallMoleculeViewer");
+  const smallName   = document.getElementById("smallMoleculeName");
+
+  const pdbStage    = document.getElementById("pdbStage");
+  const pdbHolder   = document.getElementById("pdbViewer");
+  const pdbName     = document.getElementById("pdbName");
+
+  if (
+    !smallStage ||
+    !smallHolder ||
+    !smallName ||
+    !pdbStage ||
+    !pdbHolder ||
+    !pdbName ||
+    !window.$3Dmol
+  ) {
+    return;
+  }
+
+
+  /* -------------------------------------------------------------------------
+     SMALL-MOLECULE DATA
+
+     Simple entries can be written as strings.
+
+         "aspirin"
+
+     If you want a nicer displayed name or need a different PubChem search
+     term, use:
+
+         {
+           label: "Displayed name",
+           query: "PubChem search name"
+         }
+     ------------------------------------------------------------------------- */
+
+  const moleculeGroups = {
+
+    /* -----------------------------------------------------------------------
+       Metal precatalysts and catalyst complexes
+       ----------------------------------------------------------------------- */
+
+    precatalysts: [
+
+      {
+        label: "Palladium(II) acetate",
+        query: "palladium acetate"
+      },
+
+      {
+        label: "Palladium(II) chloride",
+        query: "palladium chloride"
+      },
+
+      {
+        label: "Tetrakis(triphenylphosphine)palladium(0)",
+        query: "tetrakis(triphenylphosphine)palladium"
+      },
+
+      {
+        label: "Bis(triphenylphosphine)palladium(II) dichloride",
+        query: "bis(triphenylphosphine)palladium dichloride"
+      },
+
+      {
+        label: "Bis(1,5-cyclooctadiene)nickel(0)",
+        query: "bis(1,5-cyclooctadiene)nickel"
+      },
+
+      {
+        label: "Nickel(II) acetylacetonate",
+        query: "nickel acetylacetonate"
+      },
+
+      {
+        label: "Nickel(II) chloride",
+        query: "nickel chloride"
+      },
+
+      {
+        label: "Rhodium(II) acetate",
+        query: "rhodium acetate"
+      },
+
+      {
+        label: "Wilkinson's catalyst",
+        query: "chlorotris(triphenylphosphine)rhodium"
+      },
+
+      {
+        label: "Vaska's complex",
+        query: "trans-carbonylchlorobis(triphenylphosphine)iridium"
+      },
+
+      {
+        label: "Copper(I) iodide",
+        query: "copper iodide"
+      },
+
+      {
+        label: "Copper(II) acetate",
+        query: "copper acetate"
+      },
+
+      {
+        label: "Cobalt(II) acetylacetonate",
+        query: "cobalt acetylacetonate"
+      },
+
+      {
+        label: "Grubbs catalyst, first generation",
+        query: "Grubbs catalyst first generation"
+      },
+
+      {
+        label: "Grubbs catalyst, second generation",
+        query: "Grubbs catalyst second generation"
+      },
+
+      {
+        label: "Hoveyda-Grubbs catalyst, second generation",
+        query: "Hoveyda-Grubbs catalyst second generation"
+      }
+
+    ],
+
+
+    /* -----------------------------------------------------------------------
+       Catalysis ligands
+       ----------------------------------------------------------------------- */
+
+    ligands: [
+
+      "triphenylphosphine",
+      "tricyclohexylphosphine",
+      "tri-tert-butylphosphine",
+
+      {
+        label: "dppe",
+        query: "1,2-bis(diphenylphosphino)ethane"
+      },
+
+      {
+        label: "dppp",
+        query: "1,3-bis(diphenylphosphino)propane"
+      },
+
+      {
+        label: "dppb",
+        query: "1,4-bis(diphenylphosphino)butane"
+      },
+
+      {
+        label: "dppf",
+        query: "1,1'-bis(diphenylphosphino)ferrocene"
+      },
+
+      {
+        label: "Xantphos",
+        query: "Xantphos"
+      },
+
+      {
+        label: "DPEphos",
+        query: "DPEphos"
+      },
+
+      {
+        label: "BINAP",
+        query: "BINAP"
+      },
+
+      {
+        label: "SEGPHOS",
+        query: "SEGPHOS"
+      },
+
+      {
+        label: "BrettPhos",
+        query: "BrettPhos"
+      },
+
+      {
+        label: "XPhos",
+        query: "XPhos"
+      },
+
+      {
+        label: "SPhos",
+        query: "SPhos"
+      },
+
+      {
+        label: "RuPhos",
+        query: "RuPhos"
+      },
+
+      {
+        label: "JohnPhos",
+        query: "JohnPhos"
+      },
+
+      {
+        label: "DavePhos",
+        query: "DavePhos"
+      },
+
+      {
+        label: "2,2'-Bipyridine",
+        query: "2,2'-bipyridine"
+      },
+
+      {
+        label: "1,10-Phenanthroline",
+        query: "1,10-phenanthroline"
+      },
+
+      {
+        label: "2,2':6',2''-Terpyridine",
+        query: "2,2':6',2''-terpyridine"
+      }
+
+    ],
+
+
+    /* -----------------------------------------------------------------------
+       Drugs
+       ----------------------------------------------------------------------- */
+
+    drugs: [
+
+      "acetaminophen",
+      "aspirin",
+      "ibuprofen",
+      "naproxen",
+      "diclofenac",
+      "celecoxib",
+      "ketorolac",
+
+      "lidocaine",
+      "bupivacaine",
+      "procaine",
+
+      "amoxicillin",
+      "penicillin V",
+      "cephalexin",
+      "doxycycline",
+      "ciprofloxacin",
+      "azithromycin",
+      "rifampicin",
+
+      "metformin",
+      "glipizide",
+      "sitagliptin",
+      "empagliflozin",
+
+      "atorvastatin",
+      "simvastatin",
+      "rosuvastatin",
+
+      "warfarin",
+      "apixaban",
+      "rivaroxaban",
+      "clopidogrel",
+
+      "losartan",
+      "valsartan",
+      "lisinopril",
+      "amlodipine",
+      "propranolol",
+      "metoprolol",
+      "hydrochlorothiazide",
+      "furosemide",
+
+      "omeprazole",
+      "famotidine",
+      "ondansetron",
+      "metoclopramide",
+
+      "fluoxetine",
+      "sertraline",
+      "citalopram",
+      "venlafaxine",
+      "bupropion",
+      "diazepam",
+      "lorazepam",
+      "zolpidem",
+
+      "gabapentin",
+      "pregabalin",
+      "carbamazepine",
+      "lamotrigine",
+      "levetiracetam",
+
+      "sildenafil",
+      "tadalafil",
+
+      "tamoxifen",
+      "letrozole",
+      "imatinib",
+      "erlotinib",
+      "methotrexate",
+      "capecitabine",
+      "paclitaxel",
+      "doxorubicin",
+      "vincristine",
+
+      "dexamethasone",
+      "prednisone",
+      "hydrocortisone",
+
+      "levothyroxine",
+
+      "albuterol",
+      "montelukast",
+
+      "cetirizine",
+      "loratadine",
+      "diphenhydramine",
+
+      "naloxone"
+
+    ],
+
+
+    /* -----------------------------------------------------------------------
+       Natural products and naturally derived bioactive molecules
+       ----------------------------------------------------------------------- */
+
+    naturalProducts: [
+
+      "caffeine",
+      "nicotine",
+      "morphine",
+      "codeine",
+      "quinine",
+      "artemisinin",
+      "colchicine",
+      "atropine",
+      "scopolamine",
+
+      "capsaicin",
+      "curcumin",
+      "piperine",
+      "berberine",
+
+      "vanillin",
+      "eugenol",
+      "cinnamaldehyde",
+      "thymol",
+      "carvacrol",
+
+      "menthol",
+      "camphor",
+      "limonene",
+
+      "beta-carotene",
+      "lycopene",
+      "squalene",
+
+      "ursolic acid",
+      "oleanolic acid",
+      "betulinic acid",
+
+      "cholesterol",
+
+      "retinol",
+      "cholecalciferol",
+      "alpha-tocopherol",
+      "ascorbic acid",
+      "riboflavin",
+      "biotin",
+      "folic acid",
+
+      "estradiol",
+      "progesterone",
+      "testosterone",
+      "cortisol",
+
+      "dopamine",
+      "serotonin",
+      "melatonin",
+      "epinephrine",
+      "norepinephrine",
+
+      "adenosine",
+      "adenosine triphosphate",
+      "guanosine triphosphate"
+
+    ]
+
+  };
+
+
+  /* -------------------------------------------------------------------------
+     PDB DATA
+     ------------------------------------------------------------------------- */
+
+  const pdbs = [
+
+    /* DNA */
+
+    {
+      id: "1BNA",
+      name: "B-DNA dodecamer"
+    },
+
+    {
+      id: "355D",
+      name: "High-resolution B-DNA"
+    },
+
+    {
+      id: "1KF1",
+      name: "Human telomeric G-quadruplex"
+    },
+
+    {
+      id: "2HY9",
+      name: "Human telomeric G-quadruplex · hybrid-1"
+    },
+
+    {
+      id: "1HAO",
+      name: "Thrombin–TBA complex"
+    },
+
+
+    /* Fluorogenic RNA aptamers */
+
+    {
+      id: "4TS2",
+      name: "Spinach RNA aptamer"
+    },
+
+    {
+      id: "7OA3",
+      name: "Chili RNA aptamer"
+    },
+
+    {
+      id: "7KVT",
+      name: "Squash RNA aptamer"
+    },
+
+    {
+      id: "8U60",
+      name: "Mango II RNA aptamer"
+    },
+
+
+    /* Transfer RNA */
+
+    {
+      id: "1EHZ",
+      name: "Yeast tRNA(Phe)"
+    },
+
+    {
+      id: "4TNA",
+      name: "Yeast tRNA(Phe)"
+    },
+
+
+    /* Riboswitches */
+
+    {
+      id: "1Y26",
+      name: "Adenine riboswitch"
+    },
+
+    {
+      id: "1Y27",
+      name: "Guanine riboswitch"
+    },
+
+    {
+      id: "2GIS",
+      name: "SAM-I riboswitch"
+    },
+
+    {
+      id: "3IRW",
+      name: "c-di-GMP riboswitch"
+    },
+
+
+    /* Ribozymes and catalytic RNA */
+
+    {
+      id: "1GID",
+      name: "Group I intron P4–P6 RNA"
+    },
+
+    {
+      id: "1MME",
+      name: "Hammerhead ribozyme"
+    },
+
+    {
+      id: "299D",
+      name: "Hammerhead ribozyme · catalytic intermediate"
+    },
+
+    {
+      id: "301D",
+      name: "Hammerhead ribozyme · Mg²⁺ complex"
+    },
+
+    {
+      id: "1HMH",
+      name: "Hammerhead ribozyme"
+    },
+
+    {
+      id: "4PR6",
+      name: "HDV ribozyme"
+    },
+
+    {
+      id: "1ATO",
+      name: "HDV ribozyme hairpin"
+    },
+
+    {
+      id: "1VBY",
+      name: "HDV ribozyme precursor"
+    }
+
+  ];
+
+
+  /* -------------------------------------------------------------------------
+     HELPERS
+     ------------------------------------------------------------------------- */
+
+  const pick = array => {
+    return array[Math.floor(Math.random() * array.length)];
+  };
+
+
+  const shuffle = array => {
+    const copy = [...array];
+
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+
+    return copy;
+  };
+
+
+  const moleculeEntry = item => {
+
+    if (typeof item === "string") {
+      return {
+        label: item.charAt(0).toUpperCase() + item.slice(1),
+        query: item
+      };
+    }
+
+    return item;
+  };
+
+
+  /* -------------------------------------------------------------------------
+     ATOM COLORS
+     ------------------------------------------------------------------------- */
+
+  const elementColors = {
+
+    C:  "#185B5F",
+    H:  "#F4F0E8",
+    O:  "#D85E4E",
+    N:  "#3E70A5",
+    S:  "#D3A33C",
+    P:  "#C86A42",
+
+    F:  "#7EA987",
+    Cl: "#6D9B79",
+    Br: "#9A5A46",
+    I:  "#786095",
+
+    B:  "#B8865B",
+    Si: "#A79A85",
+
+    Fe: "#B56B4C",
+    Co: "#7B79A8",
+    Ni: "#6F8E79",
+    Cu: "#B87333",
+
+    Ru: "#7190A6",
+    Rh: "#8B7BA7",
+    Pd: "#8A9494",
+    Ir: "#6C7180",
+    Pt: "#7E8791",
+
+    Ag: "#A7ACB2",
+    Au: "#C7A64A",
+    Zn: "#889A80"
+
+  };
+
+
+  /* -------------------------------------------------------------------------
+     SMALL-MOLECULE VIEWER
+     ------------------------------------------------------------------------- */
+
+  const smallViewer = $3Dmol.createViewer(
+    smallHolder,
+    {
+      backgroundColor: "#F1EFE9",
+      backgroundAlpha: 1,
+      antialias: true,
+      orthographic: true
+    }
+  );
+
+
+  function styleSmallMolecule() {
+
+    smallViewer.setStyle(
+      {},
+      {
+        stick: {
+          radius: 0.13,
+          color: "#A5AAA6"
+        },
+        sphere: {
+          scale: 0.27,
+          color: "#A5AAA6"
+        }
+      }
+    );
+
+
+    Object.entries(elementColors).forEach(([element, color]) => {
+
+      smallViewer.setStyle(
+        { elem: element },
+        {
+          stick: {
+            radius: 0.13,
+            color
+          },
+          sphere: {
+            scale: 0.27,
+            color
+          }
+        }
+      );
+
+    });
+
+
+    smallViewer.zoomTo();
+    smallViewer.render();
+    smallViewer.spin("y", 0.28, true);
+
+    smallStage.classList.add("viewer-ready");
+  }
+
+
+  async function getPubChemCID(query) {
+
+    const url =
+      "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/" +
+      encodeURIComponent(query) +
+      "/cids/JSON";
+
+
+    const response = await fetch(
+      url,
+      {
+        mode: "cors",
+        cache: "default"
+      }
+    );
+
+
+    if (!response.ok) {
+      throw new Error("PubChem name lookup failed");
+    }
+
+
+    const data = await response.json();
+    const cid = data?.IdentifierList?.CID?.[0];
+
+
+    if (!cid) {
+      throw new Error("No PubChem CID found");
+    }
+
+
+    return cid;
+  }
+
+
+  async function getPubChemSDF(cid) {
+
+    const base =
+      "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/" +
+      cid +
+      "/SDF";
+
+
+    /* Prefer PubChem's 3D conformer when available. */
+
+    let response = await fetch(
+      base + "?record_type=3d",
+      {
+        mode: "cors",
+        cache: "default"
+      }
+    );
+
+
+    /* Fall back to the standard record if a 3D record is unavailable. */
+
+    if (!response.ok) {
+      response = await fetch(
+        base,
+        {
+          mode: "cors",
+          cache: "default"
+        }
+      );
+    }
+
+
+    if (!response.ok) {
+      throw new Error("PubChem structure download failed");
+    }
+
+
+    return response.text();
+  }
+
+
+  async function loadSmallMolecule() {
+
+    /*
+      Choosing the category first gives each chemistry type equal probability,
+      regardless of how many compounds happen to be listed in that category.
+    */
+
+    const groups = Object.values(moleculeGroups);
+    const selectedGroup = pick(groups);
+
+    /*
+      Try the randomly selected category first. If every entry in that category
+      fails, the remaining categories are tried automatically.
+    */
+
+    const otherGroups = shuffle(
+      groups.filter(group => group !== selectedGroup)
+    );
+
+
+    const groupsToTry = [
+      selectedGroup,
+      ...otherGroups
+    ];
+
+
+    for (const group of groupsToTry) {
+
+      const candidates = shuffle(group).map(moleculeEntry);
+
+
+      for (const candidate of candidates) {
+
+        try {
+
+          const cid = await getPubChemCID(candidate.query);
+          const sdf = await getPubChemSDF(cid);
+
+          smallViewer.removeAllModels();
+          smallViewer.addModel(sdf, "sdf");
+
+          smallName.textContent = candidate.label;
+
+          styleSmallMolecule();
+
+          return;
+
+        }
+        catch (error) {
+
+          console.debug(
+            "Skipping PubChem entry:",
+            candidate.query,
+            error
+          );
+
+        }
+
+      }
+
+    }
+
+
+    smallName.textContent = "Small-molecule structure unavailable";
+  }
+
+
+  /* -------------------------------------------------------------------------
+     PDB VIEWER
+     ------------------------------------------------------------------------- */
+
+  const pdbViewer = $3Dmol.createViewer(
+    pdbHolder,
+    {
+      backgroundColor: "#F1EFE9",
+      backgroundAlpha: 1,
+      antialias: true,
+      orthographic: true
+    }
+  );
+
+
+  const pdbPalette = [
+    "#185B5F",
+    "#C86A42",
+    "#839885",
+    "#4D9396",
+    "#6F7D75",
+    "#A96E52"
+  ];
+
+
+  function stylePDB(model) {
+
+    const atoms = model.selectedAtoms({});
+
+    const chains = [
+      ...new Set(
+        atoms
+          .map(atom => atom.chain)
+          .filter(Boolean)
+      )
+    ];
+
+
+    model.setStyle(
+      {},
+      {
+        cartoon: {
+          color: "#185B5F",
+          opacity: 0.96
+        }
+      }
+    );
+
+
+    chains.forEach((chain, index) => {
+
+      model.setStyle(
+        { chain },
+        {
+          cartoon: {
+            color: pdbPalette[index % pdbPalette.length],
+            opacity: 0.96
+          }
+        }
+      );
+
+    });
+
+
+    model.setStyle(
+      { hetflag: true },
+      {
+        stick: {
+          radius: 0.16,
+          colorscheme: "Jmol"
+        },
+        sphere: {
+          scale: 0.22,
+          colorscheme: "Jmol"
+        }
+      }
+    );
+
+
+    /* Hide water. */
+
+    model.setStyle(
+      { resn: "HOH" },
+      {}
+    );
+
+
+    pdbViewer.zoomTo();
+    pdbViewer.render();
+    pdbViewer.spin("y", 0.20, true);
+
+    pdbStage.classList.add("viewer-ready");
+  }
+
+
+  async function getPDBStructure(id) {
+
+    const cleanID = id.trim().toUpperCase();
+
+
+    /* Try legacy PDB format first. */
+
+    let response = await fetch(
+      `https://files.rcsb.org/download/${cleanID}.pdb`,
+      {
+        mode: "cors",
+        cache: "default"
+      }
+    );
+
+
+    if (response.ok) {
+      return {
+        text: await response.text(),
+        format: "pdb",
+        id: cleanID
+      };
+    }
+
+
+    /* Fall back to mmCIF for structures without a PDB-format file. */
+
+    response = await fetch(
+      `https://files.rcsb.org/download/${cleanID}.cif`,
+      {
+        mode: "cors",
+        cache: "default"
+      }
+    );
+
+
+    if (!response.ok) {
+      throw new Error("RCSB structure download failed");
+    }
+
+
+    return {
+      text: await response.text(),
+      format: "cif",
+      id: cleanID
+    };
+  }
+
+
+  async function loadPDB() {
+
+    const candidates = shuffle(pdbs);
+
+
+    for (const candidate of candidates) {
+
+      try {
+
+        const structure = await getPDBStructure(candidate.id);
+
+        pdbViewer.removeAllModels();
+
+        const model = pdbViewer.addModel(
+          structure.text,
+          structure.format
+        );
+
+
+        pdbName.textContent =
+          `${candidate.name} · ${structure.id}`;
+
+
+        stylePDB(model);
+
+        return;
+
+      }
+      catch (error) {
+
+        console.debug(
+          "Skipping PDB entry:",
+          candidate.id,
+          error
+        );
+
+      }
+
+    }
+
+
+    pdbName.textContent = "PDB structure unavailable";
+  }
+
+
+  /* -------------------------------------------------------------------------
+     START
+     ------------------------------------------------------------------------- */
+
+  loadSmallMolecule();
+  loadPDB();
+
+})();
+
+
+</script></body></html>
