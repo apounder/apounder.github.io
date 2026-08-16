@@ -1,5 +1,7 @@
 # Austin Pounder Research Website
 
+https://apounder.github.io/
+
 ## Pages
 
 - `index.html` — About, research overview, interactive molecular viewers, selected publications
