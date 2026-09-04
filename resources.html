@@ -4,8 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Chemistry and computational chemistry resources curated by Austin Pounder." name="description"/>
+<meta content="Chemistry software, reference data, laboratory guides, and learning resources curated by Austin Pounder." name="description"/>
 <title>Resources — Austin Pounder</title>
+<script src="assets/js/theme-init.js"></script>
 <style>
         :root {
             --ink: #161A19;
@@ -689,27 +690,31 @@
             }
         }
     </style>
+<link href="assets/css/site.css" rel="stylesheet"/>
+<link href="assets/images/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#165c58" name="theme-color"/>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <!-- =========================================================
          HEADER
          ========================================================= -->
 <header class="site-header">
 <div class="container header-inner">
-<a class="logo" href="index.html">
+<a aria-label="Austin Pounder, home" class="logo" href="index.html">
 <span class="logo-main">Austin Pounder</span>
 <span class="logo-sub">research</span>
 </a>
-<nav class="nav"><a href="index.html">About</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="posters.html">Posters</a><a class="active" href="resources.html">Resources</a><a href="assets/files/Austin_Pounder_CV.pdf" target="_blank">CV</a></nav>
+<nav aria-label="Primary navigation" class="nav" id="site-navigation"><a href="index.html">About</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="posters.html">Posters</a><a class="active" href="resources.html">Resources</a><a href="assets/files/Austin_Pounder_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a></nav>
 <a aria-label="Email Austin" class="orbit-button" href="mailto:austin.pounder@colostate.edu">
-<span>±</span>
+<span>Email</span>
 </a>
-<button aria-label="Open navigation" class="menu" type="button">
+<button aria-controls="site-navigation" aria-expanded="false" aria-label="Open navigation" class="menu" type="button">
                 ☰
             </button>
 </div>
 </header>
-<main>
+<main id="main-content">
 <!-- =====================================================
              HERO
              ===================================================== -->
@@ -777,7 +782,7 @@
                         </h2>
 </div>
 <div class="resource-grid">
-<a class="resource-card featured" data-category="computational" data-search="gaussian gaussian 16 quantum chemistry electronic structure software" href="https://gaussian.com/" rel="noopener" target="_blank">
+<a class="resource-card featured" data-category="computational" data-search="gaussian gaussian 16 quantum chemistry electronic structure software" href="https://gaussian.com/" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">
                                     Quantum chemistry
@@ -793,7 +798,7 @@
                                 Official Gaussian website.
                             </p>
 </a>
-<a class="resource-card featured" data-category="computational" data-search="orca quantum chemistry electronic structure neese faccts manual software" href="https://www.faccts.de/orca/" rel="noopener" target="_blank">
+<a class="resource-card featured" data-category="computational" data-search="orca quantum chemistry electronic structure neese faccts manual software" href="https://www.faccts.de/orca/" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">
                                     Quantum chemistry
@@ -824,7 +829,7 @@
                         </h2>
 </div>
 <div class="resource-grid">
-<a class="resource-card" data-category="reference" data-search="nmr chemical shifts solvents impurities 1997 gottlieb kotlyar nudelman" href="https://pubs.acs.org/doi/abs/10.1021/jo971176v" rel="noopener" target="_blank">
+<a class="resource-card" data-category="reference" data-search="nmr chemical shifts solvents impurities 1997 gottlieb kotlyar nudelman" href="https://pubs.acs.org/doi/abs/10.1021/jo971176v" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">NMR</span>
 <span class="resource-arrow">↗</span>
@@ -833,7 +838,7 @@
                                 NMR Chemical Shifts of Solvents and Impurities · 1997
                             </h3>
 </a>
-<a class="resource-card" data-category="reference" data-search="nmr chemical shifts organometallics solvents impurities 2010 fulmer miller gottlieb" href="https://pubs.acs.org/doi/10.1021/om100106e" rel="noopener" target="_blank">
+<a class="resource-card" data-category="reference" data-search="nmr chemical shifts organometallics solvents impurities 2010 fulmer miller gottlieb" href="https://pubs.acs.org/doi/10.1021/om100106e" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">NMR</span>
 <span class="resource-arrow">↗</span>
@@ -842,7 +847,7 @@
                                 NMR Chemical Shifts of Solvents and Impurities · 2010
                             </h3>
 </a>
-<a class="resource-card" data-category="reference" data-search="nmr chemical shifts trace impurities 2016 organic process research development" href="https://pubs.acs.org/doi/10.1021/acs.oprd.5b00417" rel="noopener" target="_blank">
+<a class="resource-card" data-category="reference" data-search="nmr chemical shifts trace impurities 2016 organic process research development" href="https://pubs.acs.org/doi/10.1021/acs.oprd.5b00417" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">NMR</span>
 <span class="resource-arrow">↗</span>
@@ -851,7 +856,7 @@
                                 NMR Chemical Shifts of Solvents and Impurities · 2016
                             </h3>
 </a>
-<a class="resource-card" data-category="reference" data-search="pka table evans acidity acid base organic chemistry" href="https://evans.rc.fas.harvard.edu/pdf/evans_pKa_table.pdf" rel="noopener" target="_blank">
+<a class="resource-card" data-category="reference" data-search="pka table evans acidity acid base organic chemistry" href="https://evans.rc.fas.harvard.edu/pdf/evans_pKa_table.pdf" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">pKa</span>
 <span class="resource-arrow">↗</span>
@@ -860,7 +865,7 @@
                                 Evans pKa Table
                             </h3>
 </a>
-<a class="resource-card" data-category="reference" data-search="bordwell pka table acidity organic chemistry reich" href="https://www.chem.wisc.edu/areas/reich/pkatable/" rel="noopener" target="_blank">
+<a class="resource-card" data-category="reference" data-search="bordwell pka table acidity organic chemistry reich" href="https://www.chem.wisc.edu/areas/reich/pkatable/" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">pKa</span>
 <span class="resource-arrow">↗</span>
@@ -869,7 +874,7 @@
                                 Bordwell pKa Table
                             </h3>
 </a>
-<a class="resource-card" data-category="reference" data-search="solvent properties drying agents purification solvent drying" href="https://078d1fb3-332e-4f97-93f5-36898b574d86.filesusr.com/ugd/a2ca76_0bb24e760d2d43dd88aa98104cee6732.pdf" rel="noopener" target="_blank">
+<a class="resource-card" data-category="reference" data-search="solvent properties drying agents purification solvent drying" href="https://078d1fb3-332e-4f97-93f5-36898b574d86.filesusr.com/ugd/a2ca76_0bb24e760d2d43dd88aa98104cee6732.pdf" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">Solvents</span>
 <span class="resource-arrow">↗</span>
@@ -878,7 +883,7 @@
                                 Properties of Solvents and Drying Agents
                             </h3>
 </a>
-<a class="resource-card" data-category="reference" data-search="solvent miscibility table sigma aldrich solvents" href="https://www.sigmaaldrich.com/chemistry/solvents/solvent-miscibility-table.html" rel="noopener" target="_blank">
+<a class="resource-card" data-category="reference" data-search="solvent miscibility table sigma aldrich solvents" href="https://www.sigmaaldrich.com/chemistry/solvents/solvent-miscibility-table.html" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">Solvents</span>
 <span class="resource-arrow">↗</span>
@@ -902,7 +907,7 @@
                         </h2>
 </div>
 <div class="resource-grid">
-<a class="resource-card" data-category="synthetic" data-search="tlc stains thin layer chromatography stain plate silicycle" href="https://www.silicycle.com/ca/faq/thin-layer-chromatography/stains-for-tlc-plates" rel="noopener" target="_blank">
+<a class="resource-card" data-category="synthetic" data-search="tlc stains thin layer chromatography stain plate silicycle" href="https://www.silicycle.com/ca/faq/thin-layer-chromatography/stains-for-tlc-plates" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">TLC</span>
 <span class="resource-arrow">↗</span>
@@ -911,7 +916,7 @@
                                 Stains for TLC Plates
                             </h3>
 </a>
-<a class="resource-card" data-category="synthetic" data-search="amino protecting group stability protecting groups amines organic chemistry" href="https://www.organic-chemistry.org/protectivegroups/amino.shtm" rel="noopener" target="_blank">
+<a class="resource-card" data-category="synthetic" data-search="amino protecting group stability protecting groups amines organic chemistry" href="https://www.organic-chemistry.org/protectivegroups/amino.shtm" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">
                                     Protecting groups
@@ -922,7 +927,7 @@
                                 Amino Protecting Group Stability
                             </h3>
 </a>
-<a class="resource-card" data-category="synthetic" data-search="baran essentials heterocyclic chemistry heterocycles scripps" href="https://www.scripps.edu/baran/heterocycles/" rel="noopener" target="_blank">
+<a class="resource-card" data-category="synthetic" data-search="baran essentials heterocyclic chemistry heterocycles scripps" href="https://www.scripps.edu/baran/heterocycles/" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">
                                     Heterocycles
@@ -934,7 +939,7 @@
                             </h3>
 
 </a>
-<a class="resource-card" data-category="synthetic" data-search="iupac graphical representation stereochemical configuration stereochemistry wedge dash" href="https://publications.iupac.org/pac/78/10/1897/index.html" rel="noopener" target="_blank">
+<a class="resource-card" data-category="synthetic" data-search="iupac graphical representation stereochemical configuration stereochemistry wedge dash" href="https://publications.iupac.org/pac/78/10/1897/index.html" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">
                                     Stereochemistry
@@ -960,7 +965,7 @@
                         </h2>
 </div>
 <div class="resource-grid">
-<a class="resource-card" data-category="technique" data-search="not voodoo experimental organic chemistry laboratory technique rochester" href="https://chem.chem.rochester.edu/~nvd/index.php" rel="noopener" target="_blank">
+<a class="resource-card" data-category="technique" data-search="not voodoo experimental organic chemistry laboratory technique rochester" href="https://chem.chem.rochester.edu/~nvd/index.php" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">
                                     Lab technique
@@ -971,7 +976,7 @@
                                 Not Voodoo
                             </h3>
 </a>
-<a class="resource-card" data-category="technique" data-search="schlenk line survival guide air moisture sensitive chemistry glovebox" href="https://schlenklinesurvivalguide.wordpress.com/" rel="noopener" target="_blank">
+<a class="resource-card" data-category="technique" data-search="schlenk line survival guide air moisture sensitive chemistry glovebox" href="https://schlenklinesurvivalguide.wordpress.com/" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">
                                     Air-sensitive chemistry
@@ -997,7 +1002,7 @@
                         </h2>
 </div>
 <div class="resource-grid">
-<a class="resource-card" data-category="learning" data-search="visualize organic chemistry reaction mechanism visualization" href="https://visualizeorgchem.com/" rel="noopener" target="_blank">
+<a class="resource-card" data-category="learning" data-search="visualize organic chemistry reaction mechanism visualization" href="https://visualizeorgchem.com/" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">
                                     Visualization
@@ -1008,7 +1013,7 @@
                                 Visualize Organic Chemistry
                             </h3>
 </a>
-<a class="resource-card" data-category="learning" data-search="organic chemistry highlights reactions synthesis literature" href="https://www.organic-chemistry.org/Highlights/" rel="noopener" target="_blank">
+<a class="resource-card" data-category="learning" data-search="organic chemistry highlights reactions synthesis literature" href="https://www.organic-chemistry.org/Highlights/" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">
                                     Literature
@@ -1019,7 +1024,7 @@
                                 Organic Chemistry Highlights
                             </h3>
 </a>
-<a class="resource-card" data-category="learning" data-search="100 must know mechanisms organic reaction mechanisms infographic" href="https://cheminfographic.wordpress.com/category/100mustknowmechanisms/" rel="noopener" target="_blank">
+<a class="resource-card" data-category="learning" data-search="100 must know mechanisms organic reaction mechanisms infographic" href="https://cheminfographic.wordpress.com/category/100mustknowmechanisms/" target="_blank" rel="noopener noreferrer">
 <div class="resource-card-top">
 <span class="resource-kind">
                                     Mechanisms
@@ -1046,7 +1051,7 @@
 <span class="logo-main">Austin Pounder</span>
 <span class="logo-sub">research</span>
 </div>
-<div class="footer-links"><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="posters.html">Posters</a><a href="resources.html">Resources</a><a href="assets/files/Austin_Pounder_CV.pdf" rel="noopener" target="_blank">Curriculum Vitae</a><a href="https://scholar.google.ca/citations?user=NLcTITgAAAAJ&amp;hl=en" rel="noopener" target="_blank">Google Scholar</a><a href="https://orcid.org/0000-0002-5843-0922" rel="noopener" target="_blank">ORCID</a><a href="https://www.linkedin.com/in/austin-pounder-629a101b5/" rel="noopener" target="_blank">LinkedIn</a><a href="https://github.com/apounder" rel="noopener" target="_blank">GitHub</a></div>
+<div class="footer-links"><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="posters.html">Posters</a><a href="resources.html">Resources</a><a href="assets/files/Austin_Pounder_CV.pdf" target="_blank" rel="noopener noreferrer">Curriculum Vitae</a><a href="https://scholar.google.ca/citations?user=NLcTITgAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a><a href="https://orcid.org/0000-0002-5843-0922" target="_blank" rel="noopener noreferrer">ORCID</a><a href="https://www.linkedin.com/in/austin-pounder-629a101b5/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/apounder" target="_blank" rel="noopener noreferrer">GitHub</a></div>
 </div>
 <div class="footer-bottom">
 <span>
@@ -1167,5 +1172,6 @@
             updateResources
         );
     </script>
+<script defer src="assets/js/site.js"></script>
 </body>
 </html>

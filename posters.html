@@ -4,8 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Austin Pounder — experimental and computational organic chemistry research." name="description"/>
+<meta content="Conference posters by Austin Pounder covering organic chemistry, reaction mechanisms, molecular simulation, and molecular probes." name="description"/>
 <title>Posters — Austin Pounder</title>
+<script src="assets/js/theme-init.js"></script>
 <style>
         /* =========================================================
            COLORS / GLOBAL SETTINGS
@@ -466,27 +467,31 @@
             }
         }
     </style>
+<link href="assets/css/site.css" rel="stylesheet"/>
+<link href="assets/images/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="#165c58" name="theme-color"/>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <!-- =========================================================
          HEADER
          ========================================================= -->
 <header class="site-header">
 <div class="container header-inner">
-<a class="logo" href="index.html">
+<a aria-label="Austin Pounder, home" class="logo" href="index.html">
 <span class="logo-main">Austin Pounder</span>
 <span class="logo-sub">research</span>
 </a>
-<nav class="nav"><a href="index.html">About</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a class="active" href="posters.html">Posters</a><a href="resources.html">Resources</a><a href="assets/files/Austin_Pounder_CV.pdf" target="_blank">CV</a></nav>
+<nav aria-label="Primary navigation" class="nav" id="site-navigation"><a href="index.html">About</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a class="active" href="posters.html">Posters</a><a href="resources.html">Resources</a><a href="assets/files/Austin_Pounder_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a></nav>
 <a aria-label="Email Austin" class="email-button" href="mailto:austin.pounder@colostate.edu">
-                ±
+                Email
             </a>
-<button aria-label="Open navigation" class="menu" type="button">
+<button aria-controls="site-navigation" aria-expanded="false" aria-label="Open navigation" class="menu" type="button">
                 ☰
             </button>
 </div>
 </header>
-<main>
+<main id="main-content">
 <!-- =====================================================
              PAGE TITLE
              ===================================================== -->
@@ -495,7 +500,7 @@
 <h1 class="page-title">
                     Posters
                 </h1>
-<p class="page-subtitle">Research posters presented at conferences and symposia.</p>
+<p class="page-subtitle">Selected conference and symposium posters, with full-resolution PDFs where available.</p>
 </div>
 </section>
 <!-- =====================================================
@@ -519,7 +524,7 @@
 <span class="logo-main">Austin Pounder</span>
 <span class="logo-sub">research</span>
 </div>
-<div class="footer-links"><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="posters.html">Posters</a><a href="resources.html">Resources</a><a href="assets/files/Austin_Pounder_CV.pdf" rel="noopener" target="_blank">Curriculum Vitae</a><a href="https://scholar.google.ca/citations?user=NLcTITgAAAAJ&amp;hl=en" rel="noopener" target="_blank">Google Scholar</a><a href="https://orcid.org/0000-0002-5843-0922" rel="noopener" target="_blank">ORCID</a><a href="https://www.linkedin.com/in/austin-pounder-629a101b5/" rel="noopener" target="_blank">LinkedIn</a><a href="https://github.com/apounder" rel="noopener" target="_blank">GitHub</a></div>
+<div class="footer-links"><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="posters.html">Posters</a><a href="resources.html">Resources</a><a href="assets/files/Austin_Pounder_CV.pdf" target="_blank" rel="noopener noreferrer">Curriculum Vitae</a><a href="https://scholar.google.ca/citations?user=NLcTITgAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a><a href="https://orcid.org/0000-0002-5843-0922" target="_blank" rel="noopener noreferrer">ORCID</a><a href="https://www.linkedin.com/in/austin-pounder-629a101b5/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/apounder" target="_blank" rel="noopener noreferrer">GitHub</a></div>
 </div>
 <div class="footer-bottom">
 <span>
@@ -604,15 +609,14 @@
                         class="presentation-preview"
                         href="${escapeHTML(item.pdf)}"
                         target="_blank"
-                        rel="noopener"
+                        rel="noopener noreferrer"
+                        aria-label="Open poster PDF: ${escapeHTML(item.title)}"
                     >
-                        <iframe
-                            loading="lazy"
-                            title="Preview of ${escapeHTML(item.title)}"
-                            src="${escapeHTML(item.pdf)}#page=1&toolbar=0&navpanes=0&scrollbar=0&view=FitH"
-                        ></iframe>
-
-                        <span class="preview-overlay"></span>
+                        <span class="poster-cover" aria-hidden="true">
+                            <span class="poster-cover-kicker">Conference poster</span>
+                            <strong>${escapeHTML(item.title)}</strong>
+                            <span class="poster-cover-action">Open full-resolution PDF ↗</span>
+                        </span>
                     </a>
                 `
                 : `
@@ -676,5 +680,6 @@
 
         loadPresentations();
 </script>
+<script defer src="assets/js/site.js"></script>
 </body>
 </html>

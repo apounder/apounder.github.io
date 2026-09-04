@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Austin Pounder">
+  <rect width="64" height="64" rx="13" fill="#165c58"/>
+  <path d="M16 44 27 18h7l11 26h-7l-2.2-5.8H25L22.8 44Zm11.2-11.8h6.4L30.4 24Z" fill="#fff"/>
+  <circle cx="47" cy="18" r="4" fill="#d68a68"/>
+  <path d="m40 25 5-5" stroke="#d68a68" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
