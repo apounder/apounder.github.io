@@ -97,9 +97,10 @@
       syncMenu();
     };
 
-    // Page scripts perform the existing class toggle. This listener runs next
-    // and keeps the accessible state synchronized with that established logic.
-    menuButton.addEventListener("click", syncMenu);
+    menuButton.addEventListener("click", () => {
+      navigation.classList.toggle("open");
+      syncMenu();
+    });
     navigation.addEventListener("click", event => {
       if (event.target.closest("a")) closeMenu();
     });
@@ -160,11 +161,6 @@
   };
 
   setupResultCount({
-    toolbarSelector: ".pub-toolbar",
-    itemSelector: ".pub-item",
-    label: "record"
-  });
-  setupResultCount({
     toolbarSelector: ".resource-toolbar",
     itemSelector: ".resource-card",
     label: "resource"
@@ -180,74 +176,32 @@
     });
   });
 
-  const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const coarsePointerQuery = window.matchMedia("(hover: none) and (pointer: coarse)");
-
-  if (!reducedMotionQuery.matches && !coarsePointerQuery.matches) {
-    const motionSurfaces = document.querySelectorAll(
-      ".hero, .page-hero, .research-card, .hex-cell, .presentation-card"
-    );
-
-    motionSurfaces.forEach(surface => {
-      surface.classList.add("has-pointer-motion");
-      let frame = 0;
-      let fallbackTimer = 0;
-      let point = { x: 0, y: 0, px: 50, py: 50 };
-
-      const paint = () => {
-        surface.style.setProperty("--pointer-x", point.x.toFixed(3));
-        surface.style.setProperty("--pointer-y", point.y.toFixed(3));
-        surface.style.setProperty("--pointer-position-x", `${point.px.toFixed(1)}%`);
-        surface.style.setProperty("--pointer-position-y", `${point.py.toFixed(1)}%`);
-        surface.style.setProperty("--motion-x", `${(point.x * 10).toFixed(2)}px`);
-        surface.style.setProperty("--motion-y", `${(point.y * 8).toFixed(2)}px`);
-        surface.style.setProperty("--motion-x-subtle", `${(point.x * 3).toFixed(2)}px`);
-        surface.style.setProperty("--motion-y-subtle", `${(point.y * 2).toFixed(2)}px`);
-        surface.style.setProperty("--motion-x-inverse", `${(point.x * -12).toFixed(2)}px`);
-        surface.style.setProperty("--motion-y-inverse", `${(point.y * -9).toFixed(2)}px`);
-        surface.style.setProperty("--motion-angle", `${(point.x * 1.5).toFixed(2)}deg`);
-        surface.classList.add("is-pointer-active");
-        if (fallbackTimer) window.clearTimeout(fallbackTimer);
-        fallbackTimer = 0;
-        frame = 0;
-      };
-
-      surface.addEventListener("pointermove", event => {
-        const bounds = surface.getBoundingClientRect();
-        point = {
-          x: ((event.clientX - bounds.left) / bounds.width - 0.5) * 2,
-          y: ((event.clientY - bounds.top) / bounds.height - 0.5) * 2,
-          px: ((event.clientX - bounds.left) / bounds.width) * 100,
-          py: ((event.clientY - bounds.top) / bounds.height) * 100
-        };
-        if (!frame) {
-          frame = window.requestAnimationFrame(paint);
-          fallbackTimer = window.setTimeout(() => {
-            if (!frame) return;
-            window.cancelAnimationFrame(frame);
-            paint();
-          }, 48);
-        }
-      }, { passive: true });
-
-      surface.addEventListener("pointerleave", () => {
-        if (frame) window.cancelAnimationFrame(frame);
-        if (fallbackTimer) window.clearTimeout(fallbackTimer);
-        frame = 0;
-        fallbackTimer = 0;
-        surface.classList.remove("is-pointer-active");
-        surface.style.setProperty("--pointer-x", "0");
-        surface.style.setProperty("--pointer-y", "0");
-        surface.style.setProperty("--pointer-position-x", "50%");
-        surface.style.setProperty("--pointer-position-y", "50%");
-        surface.style.setProperty("--motion-x", "0px");
-        surface.style.setProperty("--motion-y", "0px");
-        surface.style.setProperty("--motion-x-subtle", "0px");
-        surface.style.setProperty("--motion-y-subtle", "0px");
-        surface.style.setProperty("--motion-x-inverse", "0px");
-        surface.style.setProperty("--motion-y-inverse", "0px");
-        surface.style.setProperty("--motion-angle", "0deg");
-      }, { passive: true });
+  const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const reveals = [...document.querySelectorAll('.reveal, .program, .resource-section-head')];
+  if ('IntersectionObserver' in window && !reducedMotionQuery.matches) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove('motion-pending');
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(element => {
+      element.classList.add('reveal', 'motion-pending');
+      observer.observe(element);
     });
+    reducedMotionQuery.addEventListener('change', event => {
+      if (event.matches) {
+        observer.disconnect();
+        reveals.forEach(element => element.classList.remove('motion-pending'));
+      }
+    });
+  }
+  const siteHeader = document.querySelector('.site-header');
+  if (siteHeader) {
+    const updateHeader = () => siteHeader.classList.toggle('is-scrolled', window.scrollY > 12);
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
   }
 })();

@@ -1,0 +1,3 @@
+# Development-only browser and content checks; not used by the hosted site.
+playwright==1.62.0
+PyYAML==6.0.3

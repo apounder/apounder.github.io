@@ -1,0 +1,71 @@
+# Authentication and write authorization are enforced by Pages CMS / GitHub.
+# Keep repository write access owner-only and do not invite CMS collaborators.
+media:
+  input: assets/images/publications
+  output: /assets/images/publications
+  extensions: [jpg, jpeg, png, webp, avif]
+  rename: safe
+content:
+  - name: publications
+    label: Publications
+    type: file
+    path: assets/data/publications.json
+    format: json
+    fields:
+      - name: publications
+        label: Publication list
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.title}'
+        description: Add an entry or expand an existing one. Newest years appear first; reorder entries within a year and status to choose their order. Everything saved here is public, including submitted and in-preparation entries.
+        fields:
+          - name: title
+            label: Publication title
+            type: text
+            required: true
+          - name: authors
+            label: Authors
+            type: text
+            required: true
+            description: Separate authors with semicolons. Use Pounder, A. to highlight your name and an asterisk for corresponding authors. Plain text; no HTML needed.
+          - name: year
+            label: Year
+            type: number
+            required: true
+            options:
+              min: 1900
+              max: 2200
+          - name: status
+            label: Publication status
+            type: select
+            required: true
+            options:
+              values:
+                - name: published
+                  label: Published
+                - name: submitted
+                  label: Submitted
+                - name: in preparation
+                  label: In preparation
+          - name: journal
+            label: Journal
+            type: string
+            required: true
+            description: Journal name or abbreviation; use In preparation if not yet assigned.
+          - name: details
+            label: Citation details
+            type: string
+            description: For example, 2026, 91, 120–132, or Accepted.
+          - name: url
+            label: Article / DOI link
+            type: string
+            description: Optional full HTTPS link, such as https://doi.org/10.1021/example. Leave blank if unavailable.
+            pattern:
+              regex: '^$|^https://[^\s]+$'
+              message: Enter a full HTTPS URL or leave blank.
+          - name: image
+            label: Graphical abstract
+            type: image
+            description: Optional. Upload or select the image for this paper. Its filename stays attached when you add or reorder publications.
