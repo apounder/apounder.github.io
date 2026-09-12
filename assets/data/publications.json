@@ -6,9 +6,7 @@
       "year": 2026,
       "status": "in preparation",
       "journal": "In preparation",
-      "details": "In preparation",
-      "url": "",
-      "image": ""
+      "details": "In preparation"
     },
     {
       "title": "From Dynamics to Design: Computational Insights into Fluorogenic RNA Aptamers",
@@ -16,9 +14,7 @@
       "year": 2026,
       "status": "in preparation",
       "journal": "In preparation",
-      "details": "In preparation",
-      "url": "",
-      "image": ""
+      "details": "In preparation"
     },
     {
       "title": "Impact of 2’-Ribose Modification Pattern on the Structure of siRNA Therapeutics: A Molecular Dynamics Simulation Study",
@@ -26,19 +22,15 @@
       "year": 2026,
       "status": "in preparation",
       "journal": "In preparation",
-      "details": "In preparation",
-      "url": "",
-      "image": ""
+      "details": "In preparation"
     },
     {
-      "title": "Machine Learned Interatomic Potentials for Organic Selectivity",
-      "authors": "Manoj, N.; Pounder, A.; Paton, R. S.*",
+      "title": "Mapping Organic Selectivity with Machine-Learned Interatomic Potentials: Introduction of the SELECT50 Data Set",
+      "authors": "Manoj, N.; Pounder, A.; Ahmed, N.; Bhadauria, A.; Paton, R. S.*",
       "year": 2026,
       "status": "in preparation",
       "journal": "In preparation",
-      "details": "In preparation",
-      "url": "",
-      "image": ""
+      "details": "In preparation"
     },
     {
       "title": "Simulation Criteria for Structural Convergence on RNA: A Case Study of tRNA",
@@ -46,9 +38,7 @@
       "year": 2026,
       "status": "in preparation",
       "journal": "In preparation",
-      "details": "In preparation",
-      "url": "",
-      "image": ""
+      "details": "In preparation"
     },
     {
       "title": "Benzimidazole Modification of DNA Aptamers for Ultra-Responsive Protein-Induced Fluorescence Enhancement",
@@ -56,9 +46,7 @@
       "year": 2026,
       "status": "submitted",
       "journal": "Anal. Chem. · submitted",
-      "details": "2026, Submitted",
-      "url": "",
-      "image": ""
+      "details": "2026, Submitted"
     },
     {
       "title": "Spin-State Suppression of β-Hydride Elimination En Route to Kinetically Stabilized High-Spin Fe–Alkyl Complexes Exhibiting Broad Reactivity in Small-Molecule and Polymerization Catalysis",
@@ -66,29 +54,23 @@
       "year": 2026,
       "status": "submitted",
       "journal": "Chem. Catal. · submitted",
-      "details": "2026, Submitted",
-      "url": "",
-      "image": ""
+      "details": "2026, Submitted"
     },
     {
       "title": "The Performance of Time-Dependent Density Functional Theory for Electronic Excitations of Nucleic Acid Fluorescent Probes",
       "authors": "Pounder, A.; Wetmore, S. D.*",
       "year": 2026,
       "status": "submitted",
-      "journal": "J. Chem. Theory Comput. · submitted",
-      "details": "2026, Submitted",
-      "url": "",
-      "image": ""
+      "journal": "J. Chem. Phys. · submitted",
+      "details": "2026, Submitted"
     },
     {
       "title": "Universal Solid Support Compatibility with Amino-Modified Oligonucleotide Synthesis",
       "authors": "Saraya, J. S.; Pounder, A.; Backhouse, M. R.; Wetmore, S. D.*; O’Flaherty, D. K.*",
       "year": 2026,
       "status": "submitted",
-      "journal": "Chem. Sci. · submitted",
-      "details": "2026, Submitted",
-      "url": "",
-      "image": ""
+      "journal": "Angew. Chem. Int. Ed. · submitted",
+      "details": "2026, Submitted"
     },
     {
       "title": "Isomeric Indole-Chalcone Surrogates as Complementary Reporters of Nucleic Acid Binding Thermodynamics",
@@ -98,7 +80,7 @@
       "journal": "J. Phys. Chem. B",
       "details": "2026, Accepted",
       "url": "https://doi.org/10.1021/acs.jpcb.6c02659",
-      "image": "assets/images/publications/pub-31.jpg"
+      "image": "/assets/images/publications/pub-31.jpg"
     },
     {
       "title": "An Experimental and Computational Investigation into the Allylboration/Defluorinative Semipinacol Rearrangement Cascade Reaction",
@@ -108,7 +90,7 @@
       "journal": "J. Org. Chem.",
       "details": "2026, 91, 7730–7737",
       "url": "https://doi.org/10.1021/acs.joc.5c03050",
-      "image": "assets/images/publications/pub-30.jpg"
+      "image": "/assets/images/publications/pub-30.jpg"
     },
     {
       "title": "Structural Characterization of Difluoroglycine Betaines",
@@ -118,7 +100,7 @@
       "journal": "J. Mol. Struct.",
       "details": "2026, 1368, 146292",
       "url": "https://www.sciencedirect.com/science/article/pii/S0022286026010550",
-      "image": "assets/images/publications/pub-29.jpg"
+      "image": "/assets/images/publications/pub-29.jpg"
     },
     {
       "title": "Chemoselective Divergence via Substrate Control: Decarboxylative and Decarbonylative Coupling of 2-Oxoacids with Allylic Difluorides",
@@ -128,7 +110,7 @@
       "journal": "Eur. J. Org. Chem.",
       "details": "2025, e202501058",
       "url": "https://doi.org/10.1002/ejoc.202501058",
-      "image": "assets/images/publications/pub-28.jpg"
+      "image": "/assets/images/publications/pub-28.jpg"
     },
     {
       "title": "Decarboxylative Redox Bicyclo[1.1.1]pentylation: Benchmarking the Influence of Backbone Substituents on C–C Bond-Forming Reactions",
@@ -138,7 +120,7 @@
       "journal": "Org. Lett.",
       "details": "2025, 27, 13740–13744",
       "url": "https://doi.org/10.1021/acs.orglett.5c04166",
-      "image": "assets/images/publications/pub-27.jpg"
+      "image": "/assets/images/publications/pub-27.jpg"
     },
     {
       "title": "Photobasicity-Triggered Twisted Intramolecular Charge Transfer of Push-Pull Chromophores",
@@ -148,7 +130,7 @@
       "journal": "J. Phys. Chem. B",
       "details": "2025, 129, 8485–8493",
       "url": "https://doi.org/10.1021/acs.jpcb.5c03367",
-      "image": "assets/images/publications/pub-26.jpg"
+      "image": "/assets/images/publications/pub-26.jpg"
     },
     {
       "title": "A Multiscale Computational and Experimental Study of TBA–Fluorescent Probes for Protein Sensing: Photobasicity Over Twisted Intramolecular Charge Transfer as a New Mechanism for Protein Induced Fluorescence Enhancement",
@@ -158,7 +140,7 @@
       "journal": "Phys. Chem. Chem. Phys.",
       "details": "2025, 27, 17864–17876",
       "url": "https://doi.org/10.1039/D5CP01851J",
-      "image": "assets/images/publications/pub-25.jpg"
+      "image": "/assets/images/publications/pub-25.jpg"
     },
     {
       "title": "Ruthenium-Catalyzed Isomerization of Oxabicyclic Alkenes to 1,2-Naphthalene Oxides: A Density Functional Theory Study",
@@ -168,7 +150,7 @@
       "journal": "Eur. J. Org. Chem.",
       "details": "2025, 28, e202500192",
       "url": "https://doi.org/10.1002/ejoc.202500192",
-      "image": "assets/images/publications/pub-24.jpg"
+      "image": "/assets/images/publications/pub-24.jpg"
     },
     {
       "title": "Modular Access to Nucleobase GFP-Surrogates: Smart Probes for Ratiometric Nucleic Acid Diagnostics",
@@ -178,7 +160,7 @@
       "journal": "Chem. Sci.",
       "details": "2025, 16, 6468–6479",
       "url": "https://doi.org/10.1039/D4SC07994A",
-      "image": "assets/images/publications/pub-23.jpg"
+      "image": "/assets/images/publications/pub-23.jpg"
     },
     {
       "title": "Thieno[3,2-b]thiophene for the Construction of Far-Red Molecular Rotor Hemicyanines as High-Affinity DNA Aptamer Fluorogenic Reporters",
@@ -188,7 +170,7 @@
       "journal": "Anal. Chem.",
       "details": "2024, 96, 16252–16259",
       "url": "https://doi.org/10.1021/acs.analchem.4c03151",
-      "image": "assets/images/publications/pub-22.jpg"
+      "image": "/assets/images/publications/pub-22.jpg"
     },
     {
       "title": "Nickel-Catalyzed Arylation/Lactonization Cascade Reactions for the Synthesis of Bicyclo-[3.2.1]-Lactones",
@@ -198,7 +180,7 @@
       "journal": "Organometallics",
       "details": "2024, 43, 2443–2449",
       "url": "https://doi.org/10.1021/acs.organomet.3c00515",
-      "image": "assets/images/publications/pub-21.jpg"
+      "image": "/assets/images/publications/pub-21.jpg"
     },
     {
       "title": "Rhodium-Catalyzed Ring-Opening Reactions of Heterobicyclic Alkenes with Heteroarene Nucleophiles: An Experimental and Computational Investigation",
@@ -208,7 +190,7 @@
       "journal": "Can. J. Chem.",
       "details": "2024, 102, 696–705",
       "url": "https://doi.org/10.1139/cjc-2023-0225",
-      "image": "assets/images/publications/pub-20.jpg"
+      "image": "/assets/images/publications/pub-20.jpg"
     },
     {
       "title": "Cobalt-Catalyzed Hydrogenation and Deuteration of Bicyclic Alkenes in Aqueous Environment",
@@ -218,7 +200,7 @@
       "journal": "Eur. J. Org. Chem.",
       "details": "2024, e202301306",
       "url": "https://doi.org/10.1002/ejoc.202301306",
-      "image": "assets/images/publications/pub-19.jpg"
+      "image": "/assets/images/publications/pub-19.jpg"
     },
     {
       "title": "Isomer-Specific Solvatochromic and Molecular Rotor Properties of ESIPT-Active Push–Pull Fluorescent Chalcone Dyes",
@@ -228,7 +210,7 @@
       "journal": "J. Phys. Chem. A",
       "details": "2023, 127, 8365–8373",
       "url": "https://doi.org/10.1021/acs.jpca.3c04903",
-      "image": "assets/images/publications/pub-18.jpg"
+      "image": "/assets/images/publications/pub-18.jpg"
     },
     {
       "title": "Rhodium-Catalyzed Ring-Opening Reactions of Heterobicyclic Alkenes with Heteroarene Nucleophiles",
@@ -238,7 +220,7 @@
       "journal": "Tetrahedron Lett.",
       "details": "2023, 127, 154685",
       "url": "https://doi.org/10.1016/j.tetlet.2023.154685",
-      "image": "assets/images/publications/pub-17.jpg"
+      "image": "/assets/images/publications/pub-17.jpg"
     },
     {
       "title": "Transition-Metal-Catalyzed Domino Reactions of Strained Bicyclic Alkenes",
@@ -248,7 +230,7 @@
       "journal": "Beilstein J. Org. Chem.",
       "details": "2023, 19, 487–540",
       "url": "https://doi.org/10.3762/bjoc.19.38",
-      "image": "assets/images/publications/pub-16.jpg"
+      "image": "/assets/images/publications/pub-16.jpg"
     },
     {
       "title": "Iridium/Zinc-Co-Catalyzed Ring-Opening Reactions of Oxabicyclic Alkenes with Indole Nucleophiles: A Combined Experimental and Theoretical Study",
@@ -258,7 +240,7 @@
       "journal": "Organometallics",
       "details": "2023, 42, 780–792",
       "url": "https://doi.org/10.1021/acs.organomet.3c00017",
-      "image": "assets/images/publications/pub-15.jpg"
+      "image": "/assets/images/publications/pub-15.jpg"
     },
     {
       "title": "Iridium-Catalyzed Hydroacylation Reactions of C1-Substituted Oxabenzonorbornadienes with Salicylaldehyde: An Experimental and Computational Study",
@@ -268,7 +250,7 @@
       "journal": "Beilstein J. Org. Chem.",
       "details": "2022, 18, 251–261",
       "url": "https://doi.org/10.3762/bjoc.18.30",
-      "image": "assets/images/publications/pub-14.jpg"
+      "image": "/assets/images/publications/pub-14.jpg"
     },
     {
       "title": "Acid-Catalyzed Intramolecular Ring-Opening Reactions of Cyclopropanated Oxabenzonorbornadienes with Carboxylic Acid Nucleophiles",
@@ -278,7 +260,7 @@
       "journal": "Synthesis",
       "details": "2022, 54, 1422–1430",
       "url": "https://www.thieme-connect.com/products/ejournals/abstract/10.1055/a-1672-2260#info",
-      "image": "assets/images/publications/pub-13.jpg"
+      "image": "/assets/images/publications/pub-13.jpg"
     },
     {
       "title": "Iron-Catalyzed Domino Coupling of π-Systems",
@@ -288,7 +270,7 @@
       "journal": "Beilstein J. Org. Chem.",
       "details": "2021, 17, 2848–2893",
       "url": "https://doi.org/10.3762/bjoc.17.196",
-      "image": "assets/images/publications/pub-12.jpg"
+      "image": "/assets/images/publications/pub-12.jpg"
     },
     {
       "title": "The Mechanism and Origin of Enantioselectivity in the Rhodium-Catalyzed Asymmetric Ring-Opening Reactions of Oxabicyclic Alkenes with Organoboronic Acids: A DFT Investigation",
@@ -298,7 +280,7 @@
       "journal": "Organometallics",
       "details": "2021, 40, 1588–1597",
       "url": "https://doi.org/10.1021/acs.organomet.1c00017",
-      "image": "assets/images/publications/pub-11.jpg"
+      "image": "/assets/images/publications/pub-11.jpg"
     },
     {
       "title": "A DFT Study on the Mechanism and Origin of Regioselectivity in the Rhodium/Diene-Catalyzed Ring-Opening Reactions of C1-Substituted Oxabenzonorbornadienes with Arylboronic Acids",
@@ -308,7 +290,7 @@
       "journal": "Eur. J. Org. Chem.",
       "details": "2021, 1901–1908",
       "url": "https://doi.org/10.1002/ejoc.202100093",
-      "image": "assets/images/publications/pub-10.jpg"
+      "image": "/assets/images/publications/pub-10.jpg"
     },
     {
       "title": "Chemistry of C1-Substituted Oxabenzonorbornadienes",
@@ -318,7 +300,7 @@
       "journal": "Curr. Org. Synth.",
       "details": "2021, 18, 446–474",
       "url": "https://doi.org/10.2174/1570179417666210105121115",
-      "image": "assets/images/publications/pub-09.jpg"
+      "image": "/assets/images/publications/pub-09.jpg"
     },
     {
       "title": "Ruthenium-Catalyzed [2+2] versus Homo Diels–Alder [2+2+2] Cycloadditions of Norbornadiene and Disubstituted Alkynes: A DFT Study",
@@ -328,7 +310,7 @@
       "journal": "ACS Omega",
       "details": "2021, 6, 900–911",
       "url": "https://doi.org/10.1021/acsomega.0c05499",
-      "image": "assets/images/publications/pub-08.jpg"
+      "image": "/assets/images/publications/pub-08.jpg"
     },
     {
       "title": "Intramolecular Nickel-Catalyzed Ring-Opening Reactions of Oxabenzonorbornadienes with C1-Tethered Aryl Halides: An Improvement of Method",
@@ -338,7 +320,7 @@
       "journal": "Eur. J. Org. Chem.",
       "details": "2020, 4558–4562",
       "url": "https://doi.org/10.1002/ejoc.202000672",
-      "image": "assets/images/publications/pub-07.jpg"
+      "image": "/assets/images/publications/pub-07.jpg"
     },
     {
       "title": "Intramolecular Palladium-Catalyzed Ring Opening of Oxabenzonorbornadienes with C1-Tethered Aryl Halides",
@@ -348,7 +330,7 @@
       "journal": "Org. Lett.",
       "details": "2020, 22, 3433–3437",
       "url": "https://doi.org/10.1021/acs.orglett.0c00900",
-      "image": "assets/images/publications/pub-06.jpg"
+      "image": "/assets/images/publications/pub-06.jpg"
     },
     {
       "title": "1,2,3,5-Tetrahydronaphtho[2,1-c]oxepine",
@@ -358,7 +340,7 @@
       "journal": "IUCrData",
       "details": "2020, 5, x200288",
       "url": "https://doi.org/10.1107/S2414314620002886",
-      "image": "assets/images/publications/pub-05.jpg"
+      "image": "/assets/images/publications/pub-05.jpg"
     },
     {
       "title": "12-Ethyl-6a,10a-dihydro-5H-6-oxachrysene",
@@ -368,7 +350,7 @@
       "journal": "IUCrData",
       "details": "2020, 5, x200286",
       "url": "https://doi.org/10.1107/S2414314620002862",
-      "image": "assets/images/publications/pub-04.jpg"
+      "image": "/assets/images/publications/pub-04.jpg"
     },
     {
       "title": "Acid-Catalyzed Intramolecular Ring-Opening Reactions of Cyclopropanated Oxabenzonorbornadienes with Alcohol Nucleophiles",
@@ -378,7 +360,7 @@
       "journal": "Tetrahedron Lett.",
       "details": "2019, 60, 151228",
       "url": "https://doi.org/10.1016/j.tetlet.2019.151228",
-      "image": "assets/images/publications/pub-03.jpg"
+      "image": "/assets/images/publications/pub-03.jpg"
     },
     {
       "title": "Ruthenium-Catalyzed [2+2+2] Bis-Homo-Diels–Alder Cycloadditions of 1,5-Cyclooctadiene with Alkynyl Phosphonates",
@@ -388,7 +370,7 @@
       "journal": "Synthesis",
       "details": "2019, 51, 4271–4278",
       "url": "https://doi.org/10.1055/s-0039-1690612",
-      "image": "assets/images/publications/pub-02.jpg"
+      "image": "/assets/images/publications/pub-02.jpg"
     },
     {
       "title": "Iridium-Catalyzed Ring-Opening of Unsymmetrical Oxabenzonorbornadienes",
@@ -398,7 +380,7 @@
       "journal": "Tetrahedron Lett.",
       "details": "2019, 60, 150990",
       "url": "https://doi.org/10.1016/j.tetlet.2019.150990",
-      "image": "assets/images/publications/pub-01.jpg"
+      "image": "/assets/images/publications/pub-01.jpg"
     }
   ]
 }
