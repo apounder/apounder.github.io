@@ -62,7 +62,7 @@ class WebsiteTests(unittest.TestCase):
         self.assertEqual(keys, {'title', 'authors', 'year', 'status', 'journal', 'details', 'url', 'image'})
         for record in DATA['publications']:
             self.assertTrue(keys.issuperset(record))
-            if record['image']:
+            if record.get('image'):
                 self.assertTrue((ROOT / record['image'].lstrip('/')).is_file())
 
     def test_filter_search_topics_and_reset(self):
@@ -95,12 +95,51 @@ class WebsiteTests(unittest.TestCase):
         data['publications'].insert(0, new)
         self.mock_data(data)
         self.archive()
-        expect(self.page.locator('.pub-title').first).to_have_text(new['title'])
-        expected = next(r for r in DATA['publications'] if r['image'])
+        expect(self.page.locator('.pub-item[data-status="published"] .pub-title').first).to_have_text(new['title'])
+        expected = next(r for r in DATA['publications'] if r.get('image'))
         item = self.page.locator('.pub-item').filter(has=self.page.get_by_role('heading', name=expected['title'], exact=True))
         self.assertTrue(item.locator('img').get_attribute('src').endswith(expected['image']))
         self.page.goto(self.base + 'index.html')
-        expect(self.page.locator('#recentPublications h3').first).to_have_text(new['title'])
+        expect(self.page.locator('#featuredPublication h3')).to_have_text(new['title'])
+        self.assertFalse(self.errors, self.errors)
+
+    def test_in_preparation_records_are_not_public(self):
+        published = copy.deepcopy(next(r for r in DATA['publications'] if r['status'] == 'published'))
+        draft = copy.deepcopy(published)
+        draft.update(title='A private in-preparation manuscript', status='in preparation')
+        self.mock_data({'publications': [draft, published]})
+        self.archive()
+        expect(self.page.locator('.pub-item')).to_have_count(1)
+        expect(self.page.locator('#publicationStatus')).to_have_text('1 of 1 publications')
+        expect(self.page.locator('[data-filter="in preparation"]')).to_have_count(0)
+        expect(self.page.get_by_text(draft['title'], exact=True)).to_have_count(0)
+        self.page.goto(self.base + 'index.html')
+        expect(self.page.locator('#featuredPublication h3, #recentPublications h3')).to_have_count(1)
+        expect(self.page.get_by_text(draft['title'], exact=True)).to_have_count(0)
+        self.assertFalse(self.errors, self.errors)
+
+    def test_all_submitted_precede_published_across_years(self):
+        template = copy.deepcopy(next(r for r in DATA['publications'] if r['status'] == 'published'))
+        records = []
+        for title, year, status in [
+            ('Submitted same year', 2026, 'submitted'),
+            ('Older published', 2020, 'published'),
+            ('Newer submitted', 2100, 'submitted'),
+            ('Newest published', 2026, 'published'),
+        ]:
+            record = copy.deepcopy(template)
+            record.update(title=title, year=year, status=status)
+            records.append(record)
+        self.mock_data({'publications': records})
+        self.archive()
+        self.assertEqual(self.page.locator('.pub-title').all_text_contents(),
+                         ['Newer submitted', 'Submitted same year', 'Newest published', 'Older published'])
+        ids = self.page.locator('.pub-year').evaluate_all('(nodes) => nodes.map(node => node.id)')
+        self.assertEqual(len(ids), len(set(ids)))
+        self.page.locator('[data-filter="submitted"]').click()
+        expect(self.page.locator('.pub-item:visible')).to_have_count(2)
+        self.page.locator('[data-filter="published"]').click()
+        expect(self.page.locator('.pub-item:visible')).to_have_count(2)
         self.assertFalse(self.errors, self.errors)
 
     def test_unsafe_content_cannot_execute_or_link(self):

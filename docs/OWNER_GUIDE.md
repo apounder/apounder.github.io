@@ -22,7 +22,7 @@ This account connection must be completed in your own GitHub session. The reposi
 5. Optionally select or upload a JPG, PNG, WebP, or AVIF graphical abstract. Use a descriptive, unique filename. Images remain attached to their paper when other entries move.
 6. Save. Wait for the GitHub Pages deployment to complete, then refresh the site.
 
-The archive groups by descending year, then **In preparation → Submitted → Published**. Within each year and status, the editor's list order is preserved, so move the newest paper above earlier papers in the same group. Display numbers are recalculated automatically. The homepage shows the first four published articles from the same data. Topic tags are inferred from the publication text.
+The archive lists **all Submitted manuscripts before Published papers**, with descending year order within each status. Within the same year and status, the editor's list order is preserved, so move the newest paper above earlier papers in the same group. Display numbers are recalculated automatically. The homepage shows the first four published articles from the same data. Topic tags are inferred from the publication text. In-preparation papers are excluded from the public data and editor options; keep draft records outside this repository.
 
 To update an existing publication, expand its title in the editor and change its fields. To remove one, remove that list item and save. Avoid editing the same list in multiple browser tabs. Keep a copy of the old value if you are unsure; GitHub commit history can restore earlier versions.
 
@@ -32,7 +32,7 @@ GitHub Pages serves a public, read-only website. It cannot keep an HTML admin pa
 
 The editing interface lives on Pages CMS, which authenticates against GitHub and performs authorized repository writes on its server. A visitor can see the public sign-in link, source code, configuration, and publication data; that does not grant write access. Forking the repository only allows editing their own copy. For owner-only access, only your account may have repository write access, and you must not invite CMS collaborators. Existing access grants, account compromise, and the hosted CMS service remain part of the trust boundary; `.pages.yml` is a form schema, not an access-control rule.
 
-**Everything in the publication data is public**, including “Submitted” and “In preparation.” These statuses are not private drafts. Do not put confidential drafts, credentials, or private notes in this public repository or CMS fields.
+**Everything in the publication data is public**, including “Submitted” manuscripts. Keep in-preparation papers, confidential drafts, credentials, and private notes outside this public repository and its CMS fields. The public renderer also excludes legacy records marked “in preparation,” but unpublished information must not be stored in the public JSON file.
 
 You can revoke the Pages CMS installation in GitHub **Settings → Applications → Installed GitHub Apps**. The public website will continue working with its last committed data.
 

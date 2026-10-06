@@ -35,6 +35,8 @@ window.PRESENTATION_FILES = [
         pdf:
             "assets/presentations/gfp-surrogates.pdf",
 
+        thumbnail: "assets/images/presentations/gfp-surrogates.jpg",
+
         events: [
             "18th Annual Chinook Symposium — Lethbridge, 2025",
             "WATOC 2025 — Oslo, Norway, 2025"
@@ -53,6 +55,8 @@ window.PRESENTATION_FILES = [
         pdf:
             "assets/presentations/rna-aptamers.pdf",
 
+        thumbnail: "assets/images/presentations/rna-aptamers.jpg",
+
         events: [
             "RiboWest — 2025"
         ]
@@ -69,6 +73,8 @@ window.PRESENTATION_FILES = [
 
         pdf:
             "assets/presentations/rh-ring-opening.pdf",
+
+        thumbnail: "assets/images/presentations/rh-ring-opening.jpg",
 
         events: [
             "Chinook Symposium — Lethbridge, 2023",

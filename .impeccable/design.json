@@ -1,0 +1,538 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-05T23:48:56.909Z",
+  "title": "Design System: Austin Pounder research website",
+  "extensions": {
+    "colorMeta": {
+      "introduction-green": {
+        "role": "primary",
+        "displayName": "Introduction Green",
+        "tonalRamp": [
+          "oklch(15.00% 0.0265 176.02)",
+          "oklch(26.43% 0.0265 176.02)",
+          "oklch(37.86% 0.0265 176.02)",
+          "oklch(49.29% 0.0265 176.02)",
+          "oklch(60.71% 0.0265 176.02)",
+          "oklch(72.14% 0.0265 176.02)",
+          "oklch(83.57% 0.0265 176.02)",
+          "oklch(95.00% 0.0265 176.02)"
+        ]
+      },
+      "introduction-line": {
+        "role": "neutral",
+        "displayName": "Introduction Line",
+        "tonalRamp": [
+          "oklch(15.00% 0.0313 171.24)",
+          "oklch(26.43% 0.0313 171.24)",
+          "oklch(37.86% 0.0313 171.24)",
+          "oklch(49.29% 0.0313 171.24)",
+          "oklch(60.71% 0.0313 171.24)",
+          "oklch(72.14% 0.0313 171.24)",
+          "oklch(83.57% 0.0313 171.24)",
+          "oklch(95.00% 0.0313 171.24)"
+        ]
+      },
+      "introduction-text": {
+        "role": "neutral",
+        "displayName": "Introduction Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.0073 132.41)",
+          "oklch(26.43% 0.0073 132.41)",
+          "oklch(37.86% 0.0073 132.41)",
+          "oklch(49.29% 0.0073 132.41)",
+          "oklch(60.71% 0.0073 132.41)",
+          "oklch(72.14% 0.0073 132.41)",
+          "oklch(83.57% 0.0073 132.41)",
+          "oklch(95.00% 0.0073 132.41)"
+        ]
+      },
+      "introduction-muted": {
+        "role": "neutral",
+        "displayName": "Introduction Muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.0257 152.80)",
+          "oklch(26.43% 0.0257 152.80)",
+          "oklch(37.86% 0.0257 152.80)",
+          "oklch(49.29% 0.0257 152.80)",
+          "oklch(60.71% 0.0257 152.80)",
+          "oklch(72.14% 0.0257 152.80)",
+          "oklch(83.57% 0.0257 152.80)",
+          "oklch(95.00% 0.0257 152.80)"
+        ]
+      },
+      "introduction-copy": {
+        "role": "neutral",
+        "displayName": "Introduction Copy",
+        "tonalRamp": [
+          "oklch(15.00% 0.0194 152.78)",
+          "oklch(26.43% 0.0194 152.78)",
+          "oklch(37.86% 0.0194 152.78)",
+          "oklch(49.29% 0.0194 152.78)",
+          "oklch(60.71% 0.0194 152.78)",
+          "oklch(72.14% 0.0194 152.78)",
+          "oklch(83.57% 0.0194 152.78)",
+          "oklch(95.00% 0.0194 152.78)"
+        ]
+      },
+      "introduction-border": {
+        "role": "neutral",
+        "displayName": "Introduction Border",
+        "tonalRamp": [
+          "oklch(15.00% 0.0384 161.78)",
+          "oklch(26.43% 0.0384 161.78)",
+          "oklch(37.86% 0.0384 161.78)",
+          "oklch(49.29% 0.0384 161.78)",
+          "oklch(60.71% 0.0384 161.78)",
+          "oklch(72.14% 0.0384 161.78)",
+          "oklch(83.57% 0.0384 161.78)",
+          "oklch(95.00% 0.0384 161.78)"
+        ]
+      },
+      "introduction-accent": {
+        "role": "primary",
+        "displayName": "Introduction Accent",
+        "tonalRamp": [
+          "oklch(15.00% 0.0913 151.13)",
+          "oklch(26.43% 0.0913 151.13)",
+          "oklch(37.86% 0.0913 151.13)",
+          "oklch(49.29% 0.0913 151.13)",
+          "oklch(60.71% 0.0913 151.13)",
+          "oklch(72.14% 0.0913 151.13)",
+          "oklch(83.57% 0.0913 151.13)",
+          "oklch(95.00% 0.0913 151.13)"
+        ]
+      },
+      "introduction-hover": {
+        "role": "neutral",
+        "displayName": "Introduction Hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.0446 153.34)",
+          "oklch(26.43% 0.0446 153.34)",
+          "oklch(37.86% 0.0446 153.34)",
+          "oklch(49.29% 0.0446 153.34)",
+          "oklch(60.71% 0.0446 153.34)",
+          "oklch(72.14% 0.0446 153.34)",
+          "oklch(83.57% 0.0446 153.34)",
+          "oklch(95.00% 0.0446 153.34)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15.00% 0 0)",
+          "oklch(26.43% 0 0)",
+          "oklch(37.86% 0 0)",
+          "oklch(49.29% 0 0)",
+          "oklch(60.71% 0 0)",
+          "oklch(72.14% 0 0)",
+          "oklch(83.57% 0 0)",
+          "oklch(95.00% 0 0)"
+        ]
+      },
+      "hero": {
+        "role": "neutral",
+        "displayName": "Hero",
+        "tonalRamp": [
+          "oklch(15.00% 0 0)",
+          "oklch(26.43% 0 0)",
+          "oklch(37.86% 0 0)",
+          "oklch(49.29% 0 0)",
+          "oklch(60.71% 0 0)",
+          "oklch(72.14% 0 0)",
+          "oklch(83.57% 0 0)",
+          "oklch(95.00% 0 0)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "tonalRamp": [
+          "oklch(15.00% 0 0)",
+          "oklch(26.43% 0 0)",
+          "oklch(37.86% 0 0)",
+          "oklch(49.29% 0 0)",
+          "oklch(60.71% 0 0)",
+          "oklch(72.14% 0 0)",
+          "oklch(83.57% 0 0)",
+          "oklch(95.00% 0 0)"
+        ]
+      },
+      "soft": {
+        "role": "neutral",
+        "displayName": "Soft",
+        "tonalRamp": [
+          "oklch(15.00% 0.0094 99.99)",
+          "oklch(26.43% 0.0094 99.99)",
+          "oklch(37.86% 0.0094 99.99)",
+          "oklch(49.29% 0.0094 99.99)",
+          "oklch(60.71% 0.0094 99.99)",
+          "oklch(72.14% 0.0094 99.99)",
+          "oklch(83.57% 0.0094 99.99)",
+          "oklch(95.00% 0.0094 99.99)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0306 172.44)",
+          "oklch(26.43% 0.0306 172.44)",
+          "oklch(37.86% 0.0306 172.44)",
+          "oklch(49.29% 0.0306 172.44)",
+          "oklch(60.71% 0.0306 172.44)",
+          "oklch(72.14% 0.0306 172.44)",
+          "oklch(83.57% 0.0306 172.44)",
+          "oklch(95.00% 0.0306 172.44)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.0190 162.27)",
+          "oklch(26.43% 0.0190 162.27)",
+          "oklch(37.86% 0.0190 162.27)",
+          "oklch(49.29% 0.0190 162.27)",
+          "oklch(60.71% 0.0190 162.27)",
+          "oklch(72.14% 0.0190 162.27)",
+          "oklch(83.57% 0.0190 162.27)",
+          "oklch(95.00% 0.0190 162.27)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15.00% 0.0145 128.64)",
+          "oklch(26.43% 0.0145 128.64)",
+          "oklch(37.86% 0.0145 128.64)",
+          "oklch(49.29% 0.0145 128.64)",
+          "oklch(60.71% 0.0145 128.64)",
+          "oklch(72.14% 0.0145 128.64)",
+          "oklch(83.57% 0.0145 128.64)",
+          "oklch(95.00% 0.0145 128.64)"
+        ]
+      },
+      "blue": {
+        "role": "primary",
+        "displayName": "Reading Green",
+        "tonalRamp": [
+          "oklch(15.00% 0.0595 164.65)",
+          "oklch(26.43% 0.0595 164.65)",
+          "oklch(37.86% 0.0595 164.65)",
+          "oklch(49.29% 0.0595 164.65)",
+          "oklch(60.71% 0.0595 164.65)",
+          "oklch(72.14% 0.0595 164.65)",
+          "oklch(83.57% 0.0595 164.65)",
+          "oklch(95.00% 0.0595 164.65)"
+        ]
+      },
+      "blue2": {
+        "role": "primary",
+        "displayName": "Blue2",
+        "tonalRamp": [
+          "oklch(15.00% 0.0607 162.32)",
+          "oklch(26.43% 0.0607 162.32)",
+          "oklch(37.86% 0.0607 162.32)",
+          "oklch(49.29% 0.0607 162.32)",
+          "oklch(60.71% 0.0607 162.32)",
+          "oklch(72.14% 0.0607 162.32)",
+          "oklch(83.57% 0.0607 162.32)",
+          "oklch(95.00% 0.0607 162.32)"
+        ]
+      },
+      "science-white": {
+        "role": "neutral",
+        "displayName": "Science White",
+        "tonalRamp": [
+          "oklch(15.00% 0.0000 89.88)",
+          "oklch(26.43% 0.0000 89.88)",
+          "oklch(37.86% 0.0000 89.88)",
+          "oklch(49.29% 0.0000 89.88)",
+          "oklch(60.71% 0.0000 89.88)",
+          "oklch(72.14% 0.0000 89.88)",
+          "oklch(83.57% 0.0000 89.88)",
+          "oklch(95.00% 0.0000 89.88)"
+        ]
+      },
+      "dark-paper": {
+        "role": "neutral",
+        "displayName": "Dark Paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.0164 168.26)",
+          "oklch(26.43% 0.0164 168.26)",
+          "oklch(37.86% 0.0164 168.26)",
+          "oklch(49.29% 0.0164 168.26)",
+          "oklch(60.71% 0.0164 168.26)",
+          "oklch(72.14% 0.0164 168.26)",
+          "oklch(83.57% 0.0164 168.26)",
+          "oklch(95.00% 0.0164 168.26)"
+        ]
+      },
+      "dark-hero": {
+        "role": "neutral",
+        "displayName": "Dark Hero",
+        "tonalRamp": [
+          "oklch(15.00% 0.0224 160.69)",
+          "oklch(26.43% 0.0224 160.69)",
+          "oklch(37.86% 0.0224 160.69)",
+          "oklch(49.29% 0.0224 160.69)",
+          "oklch(60.71% 0.0224 160.69)",
+          "oklch(72.14% 0.0224 160.69)",
+          "oklch(83.57% 0.0224 160.69)",
+          "oklch(95.00% 0.0224 160.69)"
+        ]
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "Dark Surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.0223 160.80)",
+          "oklch(26.43% 0.0223 160.80)",
+          "oklch(37.86% 0.0223 160.80)",
+          "oklch(49.29% 0.0223 160.80)",
+          "oklch(60.71% 0.0223 160.80)",
+          "oklch(72.14% 0.0223 160.80)",
+          "oklch(83.57% 0.0223 160.80)",
+          "oklch(95.00% 0.0223 160.80)"
+        ]
+      },
+      "dark-soft": {
+        "role": "neutral",
+        "displayName": "Dark Soft",
+        "tonalRamp": [
+          "oklch(15.00% 0.0251 156.26)",
+          "oklch(26.43% 0.0251 156.26)",
+          "oklch(37.86% 0.0251 156.26)",
+          "oklch(49.29% 0.0251 156.26)",
+          "oklch(60.71% 0.0251 156.26)",
+          "oklch(72.14% 0.0251 156.26)",
+          "oklch(83.57% 0.0251 156.26)",
+          "oklch(95.00% 0.0251 156.26)"
+        ]
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "Dark Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0212 106.80)",
+          "oklch(26.43% 0.0212 106.80)",
+          "oklch(37.86% 0.0212 106.80)",
+          "oklch(49.29% 0.0212 106.80)",
+          "oklch(60.71% 0.0212 106.80)",
+          "oklch(72.14% 0.0212 106.80)",
+          "oklch(83.57% 0.0212 106.80)",
+          "oklch(95.00% 0.0212 106.80)"
+        ]
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Dark Muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.0214 145.36)",
+          "oklch(26.43% 0.0214 145.36)",
+          "oklch(37.86% 0.0214 145.36)",
+          "oklch(49.29% 0.0214 145.36)",
+          "oklch(60.71% 0.0214 145.36)",
+          "oklch(72.14% 0.0214 145.36)",
+          "oklch(83.57% 0.0214 145.36)",
+          "oklch(95.00% 0.0214 145.36)"
+        ]
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Dark Line",
+        "tonalRamp": [
+          "oklch(15.00% 0.0338 152.69)",
+          "oklch(26.43% 0.0338 152.69)",
+          "oklch(37.86% 0.0338 152.69)",
+          "oklch(49.29% 0.0338 152.69)",
+          "oklch(60.71% 0.0338 152.69)",
+          "oklch(72.14% 0.0338 152.69)",
+          "oklch(83.57% 0.0338 152.69)",
+          "oklch(95.00% 0.0338 152.69)"
+        ]
+      },
+      "dark-blue": {
+        "role": "primary",
+        "displayName": "Dark Blue",
+        "tonalRamp": [
+          "oklch(15.00% 0.0584 147.32)",
+          "oklch(26.43% 0.0584 147.32)",
+          "oklch(37.86% 0.0584 147.32)",
+          "oklch(49.29% 0.0584 147.32)",
+          "oklch(60.71% 0.0584 147.32)",
+          "oklch(72.14% 0.0584 147.32)",
+          "oklch(83.57% 0.0584 147.32)",
+          "oklch(95.00% 0.0584 147.32)"
+        ]
+      },
+      "dark-blue2": {
+        "role": "primary",
+        "displayName": "Dark Blue2",
+        "tonalRamp": [
+          "oklch(15.00% 0.0631 153.48)",
+          "oklch(26.43% 0.0631 153.48)",
+          "oklch(37.86% 0.0631 153.48)",
+          "oklch(49.29% 0.0631 153.48)",
+          "oklch(60.71% 0.0631 153.48)",
+          "oklch(72.14% 0.0631 153.48)",
+          "oklch(83.57% 0.0631 153.48)",
+          "oklch(95.00% 0.0631 153.48)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Uppercase researcher name."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "DM Sans section structure."
+      },
+      "title": {
+        "displayName": "Scientific Title",
+        "purpose": "Newsreader article titles."
+      }
+    },
+    "shadows": [
+      {
+        "name": "scrolled-header",
+        "value": "0 6px 24px #253b3409",
+        "purpose": "Header after 12px scroll."
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "0 18px 30px rgba(23, 32, 30, 0.09)",
+        "purpose": "Expanded mobile navigation."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.22, 1, .36, 1)",
+        "purpose": "Short state transitions; removed under reduced-motion preference."
+      },
+      {
+        "name": "color-transition",
+        "value": "220ms ease",
+        "purpose": "Buttons, links, and controls."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "research-and-presentations",
+        "value": "1050px"
+      },
+      {
+        "name": "navigation",
+        "value": "980px"
+      },
+      {
+        "name": "article-abstract",
+        "value": "900px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Introduction Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary link on the green introduction.",
+      "html": "<a class=\"ds-hero-primary\" href=\"research.html\">Explore research</a>",
+      "css": ".ds-hero-primary{display:inline-flex;align-items:center;min-height:46px;padding:13px 19px;border:1px solid #a9e7b7;border-radius:3px;background:#a9e7b7;color:#1d302b;font:600 12px/1.62 var(--sans,'DM Sans','Segoe UI',sans-serif);text-decoration:none;transition:background-color 220ms ease,color 220ms ease,transform 300ms cubic-bezier(.22,1,.36,1)}.ds-hero-primary:hover{background:#d6f5de;border-color:#d6f5de}.ds-hero-primary:focus-visible{outline:3px solid #a9e7b7;outline-offset:3px}.ds-hero-primary:active{transform:translateY(1px)}@media(max-width:980px){.ds-hero-primary{padding:12px 14px}}@media(prefers-reduced-motion:reduce){.ds-hero-primary{transition:none}}"
+    },
+    {
+      "name": "Introduction Secondary Action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined article-archive link on green.",
+      "html": "<div class=\"ds-hero-frame\"><a class=\"ds-hero-secondary\" href=\"publications.html\">Publications</a></div>",
+      "css": ".ds-hero-frame{background:#1d302b;padding:20px}.ds-hero-secondary{display:inline-flex;align-items:center;min-height:46px;padding:13px 19px;border:1px solid #7f9b8c;border-radius:3px;background:transparent;color:#f7faf5;font:600 12px/1.62 var(--sans,'DM Sans','Segoe UI',sans-serif);text-decoration:none;transition:background-color 220ms ease,color 220ms ease}.ds-hero-secondary:hover{background:#d6f5de;border-color:#d6f5de;color:#1d302b}.ds-hero-secondary:focus-visible{outline:3px solid #a9e7b7;outline-offset:3px}.ds-hero-secondary:active{transform:translateY(1px)}@media(prefers-reduced-motion:reduce){.ds-hero-secondary{transition:none}}"
+    },
+    {
+      "name": "Archive Filter",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "Status or category control, with its selected state.",
+      "html": "<button class=\"ds-filter ds-focus\" aria-pressed=\"false\">Published</button><button class=\"ds-filter ds-focus ds-selected\" aria-pressed=\"true\">All</button>",
+      "css": ".ds-filter{min-height:44px;padding:10px 14px;border:1px solid #cbd5d1;border-radius:2px;background:var(--paper,#ffffff);color:#40504a;font:500 12px/1.62 var(--sans,'DM Sans','Segoe UI',sans-serif);cursor:pointer;transition:background-color 220ms ease,color 220ms ease}.ds-filter:hover,.ds-selected{background:var(--blue,#315e4b);border-color:var(--blue,#315e4b);color:#fff}.ds-filter:active{transform:translateY(1px)}.ds-focus:focus-visible{outline:3px solid rgba(24,91,95,.34);outline-offset:3px}@media(prefers-reduced-motion:reduce){.ds-filter{transition:none}}"
+    },
+    {
+      "name": "Archive Search",
+      "kind": "input",
+      "refersTo": "search",
+      "description": "Publication or resource search field.",
+      "html": "<input class=\"ds-search ds-focus\" type=\"search\" aria-label=\"Search publications\" placeholder=\"Search title, author, journal\u2026\">",
+      "css": ".ds-search{min-height:46px;padding:9px 12px;border:1px solid #c5d0cc;border-radius:3px;background:var(--paper,#ffffff);color:var(--ink,#253b34);font:400 13px/1.62 var(--sans,'DM Sans','Segoe UI',sans-serif);caret-color:var(--blue,#315e4b)}.ds-search::placeholder{color:var(--muted,#59655f);opacity:1}.ds-search:focus{border-color:var(--blue,#315e4b)}.ds-focus:focus-visible{outline:3px solid rgba(24,91,95,.34);outline-offset:3px}"
+    },
+    {
+      "name": "Green Navigation",
+      "kind": "nav",
+      "description": "Medium-weight sans-serif navigation inside the persistent green frame.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a href=\"research.html\">Research</a><a href=\"publications.html\" aria-current=\"page\">Publications</a></nav>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;gap:clamp(16px,1.8vw,28px);padding:20px;background:#1d302b}.ds-nav a{display:inline-flex;align-items:center;position:relative;min-height:44px;color:#f7faf5;font:500 14px/1.62 var(--sans,'DM Sans','Segoe UI',sans-serif);text-decoration:none}.ds-nav a:hover,.ds-nav a[aria-current]{color:#a9e7b7}.ds-nav a::after{content:'';position:absolute;bottom:-8px;left:0;width:100%;height:1px;background:#a9e7b7;transform:scaleX(0);transform-origin:right;transition:transform .25s ease}.ds-nav a:hover::after,.ds-nav a[aria-current]::after{transform:scaleX(1);transform-origin:left}.ds-nav a:focus-visible{outline:3px solid #a9e7b7;outline-offset:3px}@media(prefers-reduced-motion:reduce){.ds-nav a::after{transition:none}}"
+    },
+    {
+      "name": "Scientific Title",
+      "kind": "custom",
+      "description": "Featured publication title and evidence link; supplied images remain separate assets.",
+      "html": "<article class=\"ds-science\"><h3>Isomeric Indole-Chalcone Surrogates as Complementary Reporters of Nucleic Acid Binding Thermodynamics</h3><a class=\"ds-focus\" href=\"publications.html\">View publication</a></article>",
+      "css": ".ds-science{color:var(--ink,#253b34);background:var(--paper,#ffffff)}.ds-science h3{font:400 clamp(28px,2.5vw,36px)/1.16 var(--serif,'Newsreader',Georgia,serif);letter-spacing:-.02em;margin:0;overflow-wrap:anywhere}.ds-science a{display:inline-flex;align-items:center;min-height:44px;margin-top:14px;color:var(--blue,#315e4b);font:600 14px/1.62 var(--sans,'DM Sans','Segoe UI',sans-serif);text-decoration:underline;text-underline-offset:6px}.ds-science a:hover{color:var(--blue,#315e4b)}.ds-focus:focus-visible{outline:3px solid rgba(24,91,95,.34);outline-offset:3px}@media(max-width:760px){.ds-science h3{font-size:29px}}"
+    },
+    {
+      "name": "Molecular Structures",
+      "kind": "custom",
+      "description": "Always visible on desktop and mobile, with automatic rotation disabled. Offline schematics are labeled; illustration assets are separate.",
+      "html": "<section class=\"ds-molecular\"><h2>Molecular structures</h2><p>Static schematic diagrams for offline review. Automatic rotation is disabled.</p></section>",
+      "css": ".ds-molecular{background:var(--paper,#ffffff);color:var(--ink,#253b34)}.ds-molecular h2{font:400 36px/1.15 var(--serif,Newsreader,Georgia,serif);margin:0 0 12px}.ds-molecular p{color:var(--muted,#59655f);font:400 14px/1.62 var(--sans,\"DM Sans\",\"Segoe UI\",sans-serif);max-width:65ch}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The scientific reading room",
+    "overview": "The implemented world combines a deep green photographic introduction with calm white reading surfaces. Strong DM Sans identity and section headings give the site a clear frame; Newsreader scientific titles carry the detail of the work. The confirmed reference is The Matter Lab; the proposal uses its green, photographic confidence without copying its logo, artwork, or group identity.\n\nReal supplied portrait photography, graphical abstracts, and PDF-derived poster previews are the visual evidence. Components are restrained and mostly flat. Scientific material remains legible at its original proportions, while text and metadata carry navigation through the archive.",
+    "keyCharacteristics": [
+      "Deep green photographic introduction and navigation.",
+      "White reading surfaces with ruled, mostly flat content groups.",
+      "Self-hosted DM Sans and Newsreader with distinct roles.",
+      "Real scientific images, preserved rather than recreated.",
+      "Visible focus, responsive reading layouts, and reduced-motion support."
+    ],
+    "rules": [
+      {
+        "name": "The Evidence Canvas Rule",
+        "body": "Scientific images use a white canvas with contained proportions; recoloring the supplied science is not part of the visual identity.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Use DM Sans for identity, navigation, and section structure; use Newsreader for scientific titles and long-form research headings.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Evidence Rule",
+        "body": "Research evidence and poster previews are organized by type, space, and dividers rather than lifted card decoration.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** preserve the green introduction, white reading surfaces, and distinct DM Sans/Newsreader roles.",
+      "**Do** use supplied portrait, scientific abstracts, and PDF-derived previews with documented provenance.",
+      "**Do** keep figures contained on white and make article and PDF destinations explicit.",
+      "**Do** preserve visible focus, announced results, recovery controls, and reduced-motion behavior."
+    ],
+    "donts": [
+      "**Don't** copy The Matter Lab's logo, artwork, or institutional/group claims.",
+      "**Don't** recolor, redraw, or invent scientific evidence to fill an image slot.",
+      "**Don't** revive decorative molecular imagery behind the photographic introduction.",
+      "**Don't** promote inherited obsolete overrides, section kickers, or glyph-only icons into reusable system rules."
+    ]
+  }
+}

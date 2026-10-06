@@ -1,46 +1,6 @@
 {
   "publications": [
     {
-      "title": "A DFT Investigation Into the Impact of Post-Transcriptional Modifications in the Anticodon Loop of tRNA on Stacking Interactions",
-      "authors": "Pounder, A.; Sadiq, F.; Wetmore, S. D.*",
-      "year": 2026,
-      "status": "in preparation",
-      "journal": "In preparation",
-      "details": "In preparation"
-    },
-    {
-      "title": "From Dynamics to Design: Computational Insights into Fluorogenic RNA Aptamers",
-      "authors": "Pounder, A.; Wetmore, S. D.*",
-      "year": 2026,
-      "status": "in preparation",
-      "journal": "In preparation",
-      "details": "In preparation"
-    },
-    {
-      "title": "Impact of 2’-Ribose Modification Pattern on the Structure of siRNA Therapeutics: A Molecular Dynamics Simulation Study",
-      "authors": "Tajudeen, R.; Quinn, T.; Pounder, A.; Wetmore, S. D.*",
-      "year": 2026,
-      "status": "in preparation",
-      "journal": "In preparation",
-      "details": "In preparation"
-    },
-    {
-      "title": "Mapping Organic Selectivity with Machine-Learned Interatomic Potentials: Introduction of the SELECT50 Data Set",
-      "authors": "Manoj, N.; Pounder, A.; Ahmed, N.; Bhadauria, A.; Paton, R. S.*",
-      "year": 2026,
-      "status": "in preparation",
-      "journal": "In preparation",
-      "details": "In preparation"
-    },
-    {
-      "title": "Simulation Criteria for Structural Convergence on RNA: A Case Study of tRNA",
-      "authors": "Pounder, A.; Yaqoob, U.; Olvis, Z.; Lea, M.; Kothe, U.*; Wetmore, S. D.*",
-      "year": 2026,
-      "status": "in preparation",
-      "journal": "In preparation",
-      "details": "In preparation"
-    },
-    {
       "title": "Benzimidazole Modification of DNA Aptamers for Ultra-Responsive Protein-Induced Fluorescence Enhancement",
       "authors": "Pavlovic, M.; Pounder, A.; Varnovitski, N.; Wetmore, S. D.*; Manderville, R. M.*",
       "year": 2026,

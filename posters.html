@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Conference posters by Austin Pounder covering organic chemistry, reaction mechanisms, molecular simulation, and molecular probes." name="description"/>
-<title>Posters — Austin Pounder</title>
+<title>Presentations — Austin Pounder</title>
 <script src="assets/js/theme-init.js"></script>
 <style>
         /* =========================================================
@@ -467,7 +467,7 @@
             }
         }
     </style>
-<link href="assets/css/site.css" rel="stylesheet"/>
+<link href="assets/css/site.css?v=20261005-white-editorial" rel="stylesheet"/>
 <link href="assets/images/favicon.svg" rel="icon" type="image/svg+xml"/>
 <meta content="#165c58" name="theme-color"/>
 <meta property="og:title" content="Posters — Austin Pounder"/>
@@ -484,7 +484,7 @@
 <div class="container header-inner">
 <a aria-label="Austin Pounder, home" class="logo" href="index.html">
 <span class="logo-main">Austin Pounder</span>
-<span class="logo-sub">research</span>
+
 </a>
 <nav aria-label="Primary navigation" class="nav" id="site-navigation"><a href="index.html">About</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a class="active" href="posters.html">Presentations</a><a href="resources.html">Resources</a><a href="assets/files/Austin_Pounder_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a></nav>
 <a aria-label="Email Austin" class="email-button" href="mailto:austin.pounder@colostate.edu">
@@ -501,9 +501,7 @@
              ===================================================== -->
 <section class="page-hero">
 <div class="container">
-<p class="page-eyebrow">Austin Pounder / Research archive</p><h1 class="page-title">
-                    Posters
-                </h1>
+<h1 class="page-title">Presentations</h1>
 <p class="page-subtitle">Selected conference and symposium posters, with full-resolution PDFs where available.</p>
 </div>
 </section>
@@ -526,11 +524,11 @@
 <div class="footer-grid">
 <div class="logo">
 <span class="logo-main">Austin Pounder</span>
-<span class="logo-sub">research</span>
+
 </div>
 <div class="footer-links"><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="posters.html">Presentations</a><a href="resources.html">Resources</a><a href="assets/files/Austin_Pounder_CV.pdf" target="_blank" rel="noopener noreferrer">Curriculum Vitae</a><a href="https://scholar.google.ca/citations?user=NLcTITgAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a><a href="https://orcid.org/0000-0002-5843-0922" target="_blank" rel="noopener noreferrer">ORCID</a><a href="https://www.linkedin.com/in/austin-pounder-629a101b5/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/apounder" target="_blank" rel="noopener noreferrer">GitHub</a></div>
 </div>
-<div class="footer-bottom"><a class="owner-link" href="https://app.pagescms.org/" target="_blank" rel="noopener noreferrer">Owner sign in ↗</a>
+<div class="footer-bottom"><a class="owner-link" href="https://app.pagescms.org/" target="_blank" rel="noopener noreferrer">Owner sign in <svg class="link-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 <span>
                     Experimental + Computational Organic Chemistry
                 </span>
@@ -541,7 +539,7 @@
 </div>
 </footer>
 <!-- Poster data are loaded from assets/data/presentations.js. -->
-<script src="assets/data/presentations.js"></script>
+<script src="assets/data/presentations.js?v=20261005-matter"></script>
 <script>
 /* =========================================================
            SMALL HELPERS
@@ -564,6 +562,7 @@
 
 
         async function pdfExists(path) {
+            if (document.documentElement.hasAttribute('data-offline-review') || location.protocol === 'file:') return window.PRESENTATION_FILES.some(item => item.pdf === path);
             try {
                 const response = await fetch(
                     path,
@@ -602,13 +601,9 @@
                         href="${escapeHTML(item.pdf)}"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Open poster PDF: ${escapeHTML(item.title)}"
+                        aria-label="Open presentation PDF: ${escapeHTML(item.title)}"
                     >
-                        <span class="poster-cover" aria-hidden="true">
-                            <span class="poster-cover-kicker">Conference poster</span>
-                            <strong>${escapeHTML(item.title)}</strong>
-                            <span class="poster-cover-action">Open full-resolution PDF ↗</span>
-                        </span>
+                        <img class="poster-thumbnail" src="${escapeHTML(item.thumbnail)}" alt="First-page preview of ${escapeHTML(item.title)}" loading="lazy"><span class="poster-preview-action">Open full-resolution PDF <svg class="link-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                     </a>
                 `
                 : `

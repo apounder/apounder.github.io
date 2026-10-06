@@ -19,7 +19,7 @@ content:
           collapsible:
             collapsed: true
             summary: '{fields.title}'
-        description: Add an entry or expand an existing one. Newest years appear first; reorder entries within a year and status to choose their order. Everything saved here is public, including submitted and in-preparation entries.
+        description: Add a published article or submitted manuscript. Newest years appear first; reorder entries within a year and status to choose their order. Everything saved here is public. Keep in-preparation drafts outside this repository.
         fields:
           - name: title
             label: Publication title
@@ -47,13 +47,11 @@ content:
                   label: Published
                 - name: submitted
                   label: Submitted
-                - name: in preparation
-                  label: In preparation
           - name: journal
             label: Journal
             type: string
             required: true
-            description: Journal name or abbreviation; use In preparation if not yet assigned.
+            description: Journal name or abbreviation for this published article or submitted manuscript.
           - name: details
             label: Citation details
             type: string

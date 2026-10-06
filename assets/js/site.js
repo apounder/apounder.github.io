@@ -100,6 +100,7 @@
     menuButton.addEventListener("click", () => {
       navigation.classList.toggle("open");
       syncMenu();
+      if (navigation.classList.contains('open')) navigation.querySelector('a')?.focus();
     });
     navigation.addEventListener("click", event => {
       if (event.target.closest("a")) closeMenu();
@@ -120,7 +121,7 @@
       }
     });
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 760 && navigation.classList.contains("open")) closeMenu();
+      if (window.innerWidth > 980 && navigation.classList.contains("open")) closeMenu();
     }, { passive: true });
   }
 
@@ -176,28 +177,36 @@
     });
   });
 
-  const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const reveals = [...document.querySelectorAll('.reveal, .program, .resource-section-head')];
-  if ('IntersectionObserver' in window && !reducedMotionQuery.matches) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.remove('motion-pending');
-        entry.target.classList.add('in');
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.08 });
-    reveals.forEach(element => {
-      element.classList.add('reveal', 'motion-pending');
-      observer.observe(element);
+
+  const resourceSearch = document.getElementById('resourceSearch');
+  if (resourceSearch) {
+    const items = [...document.querySelectorAll('.resource-card')];
+    const empty = document.createElement('div');
+    empty.className = 'resource-empty container';
+    empty.hidden = true;
+    const heading = document.createElement('h2');
+    heading.textContent = 'No matching resources';
+    const explanation = document.createElement('p');
+    explanation.textContent = 'Try another search or reset the category to see all resources.';
+    const reset = document.createElement('button');
+    reset.type = 'button';
+    reset.className = 'hero-action primary';
+    reset.textContent = 'Clear search and filters';
+    reset.addEventListener('click', () => {
+      resourceSearch.value = '';
+      document.querySelector('.resource-filter[data-filter="all"]').click();
+      resourceSearch.dispatchEvent(new Event('input', { bubbles: true }));
+      resourceSearch.focus();
     });
-    reducedMotionQuery.addEventListener('change', event => {
-      if (event.matches) {
-        observer.disconnect();
-        reveals.forEach(element => element.classList.remove('motion-pending'));
-      }
-    });
+    empty.append(heading, explanation, reset);
+    document.querySelector('.resources').prepend(empty);
+    const updateEmpty = () => { empty.hidden = items.some(item => !item.classList.contains('hidden')); };
+    const observer = new MutationObserver(updateEmpty);
+    items.forEach(item => observer.observe(item, { attributes: true, attributeFilter: ['class'] }));
+    updateEmpty();
   }
+
+  const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   const siteHeader = document.querySelector('.site-header');
   if (siteHeader) {
     const updateHeader = () => siteHeader.classList.toggle('is-scrolled', window.scrollY > 12);

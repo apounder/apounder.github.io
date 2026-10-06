@@ -1,0 +1,20 @@
+[
+  {
+    "asset": "gfp-surrogates.jpg",
+    "origin": "assets/presentations/gfp-surrogates.pdf",
+    "page": 1,
+    "operation": "First page rendered without alterations"
+  },
+  {
+    "asset": "rna-aptamers.jpg",
+    "origin": "assets/presentations/rna-aptamers.pdf",
+    "page": 1,
+    "operation": "First page rendered without alterations"
+  },
+  {
+    "asset": "rh-ring-opening.jpg",
+    "origin": "assets/presentations/rh-ring-opening.pdf",
+    "page": 1,
+    "operation": "First page rendered without alterations"
+  }
+]
