@@ -3,9 +3,10 @@
     {
       "title": "Accelerating Mechanistic Understanding and Prediction of Chemical Selectivity with Foundation Machine-Learned Interatomic Potentials",
       "authors": "Manoj, N.; Pounder, A.; Ahmed, N.; Bhadauria, A. S.; Paton, R.",
-      "year": 2026,
+      "year": 2026
       "status": "submitted",
       "journal": "J. Am. Chem. Soc. · submitted"
+      "details": "2026, Submitted"
     },
     {
       "title": "Benzimidazole Modification of DNA Aptamers for Ultra-Responsive Protein-Induced Fluorescence Enhancement",
@@ -14,14 +15,6 @@
       "status": "submitted",
       "journal": "Anal. Chem. · submitted",
       "details": "2026, Submitted"
-    },
-    {
-      "title": "Spin-State Suppression of β-Hydride Elimination En Route to Kinetically Stabilized High-Spin Fe–Alkyl Complexes Exhibiting Broad Reactivity in Small-Molecule and Polymerization Catalysis",
-      "authors": "Li, Y.; Pounder, A.; Chokkapu, E. R.; Oh, J.; Gowda, R. R.; Casaday, C. E.; Chen, E. Y.-X.; Paton, R. S.*; Cundari, T. R.*; Dong, Y.*",
-      "year": 2026,
-      "status": "published",
-      "journal": "Chem. Catal. · submitted",
-      "details": "2026"
     },
     {
       "title": "The Performance of Time-Dependent Density Functional Theory for Electronic Excitations of Nucleic Acid Fluorescent Probes",
@@ -38,6 +31,14 @@
       "status": "submitted",
       "journal": "Angew. Chem. Int. Ed. · submitted",
       "details": "2026, Submitted"
+    },
+    {
+      "title": "Spin-State Suppression of β-Hydride Elimination En Route to Kinetically Stabilized High-Spin Fe–Alkyl Complexes Exhibiting Broad Reactivity in Small-Molecule and Polymerization Catalysis",
+      "authors": "Li, Y.; Pounder, A.; Chokkapu, E. R.; Oh, J.; Gowda, R. R.; Casaday, C. E.; Chen, E. Y.-X.; Paton, R. S.*; Cundari, T. R.*; Dong, Y.*",
+      "year": 2026,
+      "status": "published",
+      "journal": "Chem. Catal.",
+      "details": "2026"
     },
     {
       "title": "Isomeric Indole-Chalcone Surrogates as Complementary Reporters of Nucleic Acid Binding Thermodynamics",
