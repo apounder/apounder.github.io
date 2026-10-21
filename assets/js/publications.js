@@ -51,22 +51,23 @@
     node.rel = 'noopener noreferrer';
     return node;
   };
-const TOPIC_RULES=[
-  ['Machine learning',/machine[- ]learn|deep learn|neural|graph network|artificial intelligence|\bai\b|predictive model|digital chemistry/gi],
-  ['Computational chemistry',/\bdft\b|density functional|computational|theoretical|quantum chem|electronic structure|thermochem|calculation/gi],
-  ['Reaction mechanisms',/mechanis|transition state|reaction pathway|rearrangement|cascade|domino|ring-opening|cycloaddition|migration|activation/gi],
-  ['Catalysis',/cataly|catalyst|organocatal|photocatal/gi],
-  ['Transition metals',/nickel|palladium|rhodium|ruthenium|iridium|cobalt|iron|copper|transition[- ]metal|organometal/gi],
-  ['Selectivity',/selectiv|enantio|regioselect|stereo|diastereo|chemoselect|atropo|asymmetric/gi],
-  ['Molecular dynamics',/molecular dynamics|\bmd\b|conformational ensemble|simulation criteria|structural convergence/gi],
-  ['Nucleic acids',/\b(?:dna|rna|trna|sirna)\b|nucleic acid|nucleobase|aptamer|oligonucleotide/gi],
-  ['Photochemistry',/photo|excited state|emission|fluorescen|fluorophore|chromophore|photobasic|solvatochrom/gi],
-  ['Fluorine chemistry',/\bfluorin|\b(?:di|tri|tetra|poly)?fluoro(?!genic|phore|metr|esc)|\bdefluor|\bc[-–]?f\b/gi],
-  ['Spectroscopy & structure',/spectroscop|nmr|absorption|emission|structural characterization|crystal|xrd|photophys/gi],
-  ['Synthetic methodology',/synthesis|arylation|coupling|hydrogenation|deuteration|hydroacylation|lactonization|amination|ring-opening|cycloaddition/gi],
-  ['Strained molecules',/bicycl|oxabicycl|norborn|cycloprop|strained/gi],
-  ['Molecular probes',/probe|reporter|sensor|diagnostic|fluorogenic|binding thermodynamics/gi]
-];  const inferTopics = record => {
+  const TOPIC_RULES=[
+    ['Machine learning',/machine[- ]learn|deep learn|neural|graph network|artificial intelligence|\bai\b|predictive model|digital chemistry/gi],
+    ['Computational chemistry',/\bdft\b|density functional|computational|theoretical|quantum chem|electronic structure|thermochem|calculation/gi],
+    ['Reaction mechanisms',/mechanis|transition state|reaction pathway|rearrangement|cascade|domino|ring-opening|cycloaddition|migration|activation/gi],
+    ['Catalysis',/cataly|catalyst|organocatal|photocatal/gi],
+    ['Transition metals',/nickel|palladium|rhodium|ruthenium|iridium|cobalt|iron|copper|transition[- ]metal|organometal/gi],
+    ['Selectivity',/selectiv|enantio|regioselect|stereo|diastereo|chemoselect|atropo|asymmetric/gi],
+    ['Molecular dynamics',/molecular dynamics|\bmd\b|conformational ensemble|simulation criteria|structural convergence/gi],
+    ['Nucleic acids',/\b(?:dna|rna|trna|sirna)\b|nucleic acid|nucleobase|aptamer|oligonucleotide/gi],
+    ['Photochemistry',/photo|excited state|emission|fluorescen|fluorophore|chromophore|photobasic|solvatochrom/gi],
+    ['Fluorine chemistry',/\bfluorin|\b(?:di|tri|tetra|poly)?fluoro(?!genic|phore|metr|esc)|\bdefluor|\bc[-–]?f\b/gi],
+    ['Spectroscopy & structure',/spectroscop|nmr|absorption|emission|structural characterization|crystal|xrd|photophys/gi],
+    ['Synthetic methodology',/synthesis|arylation|coupling|hydrogenation|deuteration|hydroacylation|lactonization|amination|ring-opening|cycloaddition/gi],
+    ['Strained molecules',/bicycl|oxabicycl|norborn|cycloprop|strained/gi],
+    ['Molecular probes',/probe|reporter|sensor|diagnostic|fluorogenic|binding thermodynamics/gi]
+  ];
+  const inferTopics = record => {
     const text = [record.title, record.journal, record.details, record.authors].join(' ');
     const scored = TOPIC_RULES.map(([name, regex]) => [name, (text.match(regex) || []).length]);
     const topics = scored.filter(([, count]) => count).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 4).map(([name]) => name);

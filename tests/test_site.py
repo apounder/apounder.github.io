@@ -165,6 +165,20 @@ class WebsiteTests(unittest.TestCase):
         self.archive()
         expect(self.page.get_by_role('heading', name='Publications are on their way')).to_be_visible()
 
+    def test_malformed_publication_json_shows_error_and_recovers(self):
+        # A missing comma must show a recoverable error, never a stuck loader.
+        malformed = '{"publications": [{"year": 2026 "status": "submitted"}]}'
+        def fail(route):
+            route.fulfill(content_type='application/json', body=malformed)
+        self.page.route('**/assets/data/publications.json', fail)
+        self.archive()
+        expect(self.page.get_by_role('heading', name='Publications couldn’t be loaded')).to_be_visible()
+        expect(self.page.locator('#publicationStatus')).to_have_text('Publication list unavailable')
+        self.page.unroute('**/assets/data/publications.json', fail)
+        self.page.get_by_role('button', name='Try again').click()
+        expect(self.page.locator('.pub-item')).to_have_count(len(DATA['publications']))
+        self.assertFalse(self.errors, self.errors)
+
     def test_mobile_routes_theme_and_reduced_motion(self):
         self.page.set_viewport_size({'width': 390, 'height': 844})
         self.page.emulate_media(reduced_motion='reduce')
