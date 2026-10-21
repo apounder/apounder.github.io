@@ -1,6 +1,13 @@
 {
   "publications": [
     {
+      "title": "Accelerating Mechanistic Understanding and Prediction of Chemical Selectivity with Foundation Machine-Learned Interatomic Potentials",
+      "authors": "Manoj, N.; Pounder, A.; Ahmed, N.; Bhadauria, A. S.; Paton, R.",
+      "year": 2026,
+      "status": "submitted",
+      "journal": "J. Am. Chem. Soc."
+    },
+    {
       "title": "Benzimidazole Modification of DNA Aptamers for Ultra-Responsive Protein-Induced Fluorescence Enhancement",
       "authors": "Pavlovic, M.; Pounder, A.; Varnovitski, N.; Wetmore, S. D.*; Manderville, R. M.*",
       "year": 2026,
