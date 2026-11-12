@@ -38,7 +38,9 @@
       "year": 2026,
       "status": "published",
       "journal": "Chem. Catal.",
-      "details": "2026"
+      "details": "2026",
+      "url": "https://www.cell.com/chem-catalysis/abstract/S2667-1093(26)00284-8",
+      "image": "/assets/images/publications/chem-catalysis.jpg"
     },
     {
       "title": "Isomeric Indole-Chalcone Surrogates as Complementary Reporters of Nucleic Acid Binding Thermodynamics",
